@@ -10,7 +10,7 @@
 \usepackage{fancyhdr}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-
+\usepackage{xspace}
 
 \topmargin -1cm
 \oddsidemargin -0.5cm
@@ -18,8 +18,17 @@
 \textwidth 17cm
 
 
+\renewcommand{\c}{$\clubsuit$\xspace}
+\renewcommand{\d}{$\diamondsuit$\xspace}
+\newcommand{\h}{$\heartsuit$\xspace}
+\newcommand{\s}{$\spadesuit$\xspace}
+\renewcommand{\j}{$\bigstar$\xspace}
+\newcommand{\sa}{SA\xspace}
+
+\newcommand{\smallspace}{\vskip0.3cm}
+
 % Title Page
-\title{Appunti di bridge}
+\title{Convenzioni di bridge}
 \author{Giove}
 
 \begin{document}
@@ -28,34 +37,65 @@
 
 \section{Aperture}
 
+\paragraph{Algoritmo generale.}
+Si licita il colore pi\`u lungo, escludendo \s e \h se non sono almeno quinte e le \d se non sono almeno quarte.
+In caso di parit\`a di lunghezza dei semi pi\`u lunghi, si dichiara il pi\`u alto se sono almeno quinti e si dichiara il pi\`u basso se sono quarti.
+Nota: con 4 carte a \s e \h, 3 a \d\ e 2 a \c, si apre di 1\c.
+
 \subsection{Mani bilanciate}
-(4-3-3-3, 4-4-3-2, 5-3-3-2)\\
+(4-3-3-3, 4-4-3-2, 5-3-3-2 con quinta minore?)
+\smallspace
 
-\begin{tabular}{|p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}|}
+\begin{tabular}{p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}}
+ 12-14 & 1 \j & Si licita seguendo l'algoritmo generale.\\
 
- 12-14 & 1 $\bigstar$ & $\bigstar$ \`e il colore pi\`u lungo; in caso di parit\`a si licita il colore pi\`u basso se quarto, quello pi\`u alto se almeno quinto. Con questo algoritmo si aprono anche mani non bilanciate (vedi sotto).\\
+ 15-17 & 1 \sa & \\
 
- 15-17 & 1 SA & \\
+ 18-19 & 1 \j & 5-3-3-2, \j \`e il seme quinto.\\
+       & 1 \c & Tutte le altre distribuzioni.\\
 
- 18-19 & 1 $\bigstar$ & 5-3-3-2, $\bigstar$ \`e il seme quinto.\\
-       & 1 $\clubsuit$ & Tutte le altre distribuzioni.\\
+ 20-22 & 2 \sa & \\
 
- 20-22 & 2 SA & \\
-
- 23+ & 2 $\clubsuit$ & \\
-
+ 23+ & 2 \c & 
  \end{tabular}
 
 \subsection{Mani monocolore}
 (6-3-2-2, 6-3-3-1, 7-3-2-1, \dots)\\
 
-\begin{tabular}{|p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}|}
- \hline
-
- 12+ & 1 $\bigstar$ & $\bigstar$ \`e il colore lungo.\\
-\hline
+\begin{tabular}{p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}}
+ 12+ & 1 \j & \j \`e il colore lungo. Poi si ripete il colore, eventualmente a salto.
 \end{tabular}
 
 
+\subsection{Mani bicolore}
+(5-4-3-1, 5-4-2-2, 6-4-2-1, 5-5-2-1, \dots)\\
+
+\begin{tabular}{p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}}
+ 12+ & 1 \j & \j \`e il colore pi\`u lungo; in caso di parit\`a (5-5 o 6-6) si licita il color pi\`u alto (in accordo con l'algoritmo generale). Sulla ridichiarazione, per licitare il secondo colore a livello di 2 in modo ascendente (es: 1\d{} - 1\s{} - 2\h), bisogna avere 16+ HCP (rever).
+\end{tabular}
+
+
+\subsection{Mani tricolore}
+(4-4-4-1, 5-4-4-0)\\
+
+\begin{tabular}{p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}}
+ 12+ & 1 \j & Si licita seguendo l'algoritmo generale, con un'eccezione: se si ha una 4-4-4-1 con singolo a \s e meno di 16 HCP, si apre di 1\d (in modo che, sull'eventuale risposta di 1\s, si possa licitare 2\c).
+\end{tabular}
+
+
+\subsection{Sottoaperture}
+
+\begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
+ 2 \j & 6-10 HCP, con \j colore esattamente sesto diverso da \c.\\
+ 3 \j / 4 \j & Colore almeno settimo (meglio se a compagno passato).\\
+ 3 \sa & Minore almeno settimo chiuso (con A, K, Q) e non pi\`u di una dama negli altri tre colori.
+\end{tabular}
+
+
+
+\section{Risposte sull'apertura di 1 a colore}
+
+
+ 
 
 \end{document}

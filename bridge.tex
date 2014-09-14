@@ -3,8 +3,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[dvips]{graphicx}
+\usepackage[pdftex]{graphicx}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{fancyhdr}
@@ -27,9 +26,20 @@
 
 \newcommand{\smallspace}{\vskip0.3cm}
 
+\renewcommand{\tabcolsep}{0.3cm}
+
+\newenvironment{twocol}
+  {\smallspace\noindent\begin{tabular}{l p{0.8\textwidth}}}
+  {\end{tabular}\smallspace}
+
+\newenvironment{threecol}
+  {\smallspace\noindent\begin{tabular}{l l p{0.7\textwidth}}}
+  {\end{tabular}\smallspace}
+
+  
 % Title Page
 \title{Convenzioni di bridge}
-\author{Giove}
+\author{Ugo Bindini \& Giovanni Paolini}
 
 \begin{document}
 \maketitle
@@ -46,50 +56,47 @@ Nota: con 4 carte a \s e \h, 3 a \d\ e 2 a \c, si apre di 1\c.
 (4-3-3-3, 4-4-3-2, 5-3-3-2)
 \smallspace
 
-\begin{tabular}{p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}}
+\begin{threecol}
  12-14 & 1 \j & Si licita seguendo l'algoritmo generale.\\
-
- 15-17 & 1 \sa & Solo se la quinta non \`e nobile\\
-
+ 15-17 & 1 \sa & Solo se la quinta non \`e nobile.\\
  18-19 & 1 \j & 5-3-3-2, \j \`e il seme quinto. Poi \sa a salto.\\
        & 1 \c & Tutte le altre distribuzioni. Poi \sa a salto.\\
-
  20-22 & 2 \sa & \\
-
  23+ & 2 \c & 
- \end{tabular}
+\end{threecol}
+
 
 \subsection{Mani monocolore}
-(6-3-2-2, 6-3-3-1, 7-3-2-1, \dots)\\
+(6-3-2-2, 6-3-3-1, 7-3-2-1, \dots)
 
-\begin{tabular}{p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}}
+\begin{threecol}
  12+ & 1 \j & \j \`e il colore lungo. Poi si ripete il colore, eventualmente a salto.
-\end{tabular}
+\end{threecol}
 
 
 \subsection{Mani bicolore}
-(5-4-3-1, 5-4-2-2, 6-4-2-1, 5-5-2-1, \dots)\\
+(5-4-3-1, 5-4-2-2, 6-4-2-1, 5-5-2-1, \dots)
 
-\begin{tabular}{p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}}
+\begin{threecol}
  12+ & 1 \j & \j \`e il colore pi\`u lungo; in caso di parit\`a (5-5 o 6-6) si licita il colore pi\`u alto (in accordo con l'algoritmo generale). Sulla ridichiarazione, per licitare il secondo colore a livello di 2 in modo ascendente (es: 1\d{} - 1\s{} - 2\h), bisogna avere 16+ HCP (rever).
-\end{tabular}
+\end{threecol}
 
 
 \subsection{Mani tricolore}
-(4-4-4-1, 5-4-4-0)\\
+(4-4-4-1, 5-4-4-0)
 
-\begin{tabular}{p{0.05\textwidth} p{0.05\textwidth} p{0.7\textwidth}}
+\begin{threecol}
  12+ & 1 \j & Si licita seguendo l'algoritmo generale, con un'eccezione: se si ha una 4-4-4-1 con singolo a \s e meno di 16 HCP, si apre di 1\d anzich\'e 1\c (in modo che, sull'eventuale risposta di 1\s, si possa licitare 2\c).
-\end{tabular}
+\end{threecol}
 
 
 \subsection{Sottoaperture}
 
-\begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
+\begin{twocol}
  2 \j & 6-10 HCP, con \j colore esattamente sesto diverso da \c.\\
  3 \j / 4 \j & Colore almeno settimo (meglio se a compagno passato).\\
  3 \sa & Minore almeno settimo chiuso (con A, K, Q) e non pi\`u di una dama negli altri tre colori.
-\end{tabular}
+\end{twocol}
 
 
 \section{Risposte sull'apertura di 1 a colore}
@@ -101,195 +108,203 @@ Si risponde tendenzialmente con $\geq 5$ punti oppure con un Asso.
 \begin{itemize}
  \item Se possibile, dire un colore a livello di 1 (il pi\`u lungo, e in caso di parit\`a come da algoritmo generale).
  \item Altrimenti:
-\begin{center}
-\begin{tabular}{p{0.1\textwidth} p{0.05\textwidth} p{0.7\textwidth}}
-  $\leq 10$ HCP & 1 \sa & \\
-  $\geq 11$ HCP & 2 \h & con le \h almeno quinte\\
-  & 2 \d & Con le \d almeno quarte\\
-  & 2 \c & In tutti gli altri casi\\
-\end{tabular}
-\end{center}
+  \begin{threecol}
+    $\leq 10$ HCP & 1 \sa & \\
+    $\geq 11$ HCP & 2 \h & Con le \h almeno quinte.\\
+    & 2 \d & Con le \d almeno quarte.\\
+    & 2 \c & In tutti gli altri casi.\\
+  \end{threecol}
 \end{itemize}
 
 
 \subsection{Con fit su un colore maggiore \j}
 
-\begin{tabular}{p{0.05\textwidth} p{0.7\textwidth}}
+\begin{twocol}
  2 \sa & 10+ HCP, fit almeno quarto.\\
  2 \j  & 7-10 HCP, fit almeno terzo (tendenzialmente proprio terzo).\\
  3 \j  & 7-9 HCP, fit almeno quarto.\\
  4 \j  & Appoggio lungo, mano scarsa (?).\\
-\end{tabular}
+\end{twocol}
 
-Con un fit esattamente terzo e tanti punti, si pu\`o rispondere: 1\s (sull'apertura di 1\h, se si hanno le picche almeno quarte), 2\c, oppure con una cue-bid (a partire da 3\s?).
+Con un fit esattamente terzo e tanti punti, si pu\`o rispondere: 1 \s (sull'apertura di 1 \h, se si hanno le picche almeno quarte), 2 \c, oppure con una cue-bid (a partire da 3 \s \,?).
 
 
 \subsection{Con fit sulle \d}
 
-\begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
+\begin{twocol}
  1 \h/\s & Se possibile, come nel caso senza fit.\\
  1 \sa & ??\\
  2 \d  & Fit scarso.\\
  3 \d  & Fit migliore (11-12 HCP).\\
  2 \c  & Forzante manche (13+ HCP).\\
-\end{tabular}
+\end{twocol}
 
 
 
+\pagebreak
 
 \section{Risposte sull'apertura 1 SA}
 
-\subsection{Mano sbilanciata - \textit{Transfer}}
+\subsection{Mano sbilanciata (Transfer)}
 
-Almeno sei carte in un colore (o anche cinque con singoli o vuoti con senno, o se hai pochi punti), \textit{transfer}, ovvero:
+Almeno sei carte in un colore (o anche cinque con singoli o vuoti con senno, o con pochi punti).
 
-\begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
- 2 \d & Per le \h.\\
- 2 \h & Per le \s.\\
- 2 \s & Per le \c.\\
- 3 \c & Per le \d.\\
-\end{tabular}
+\begin{twocol}
+ 2 \d & Transfer per le \h.\\
+ 2 \h & Transfer per le \s.\\
+ 2 \s & Transfer per le \c.\\
+ 3 \c & Transfer per le \d.\\
+\end{twocol}
+
+L'apertore deve licitare il seme richiesto dal rispondente (che diventa automaticamente l'atout concordata), dopodiché il rispondente può proseguire passando, licitando manche o slam (a giocare), iniziando le Cue-bid, oppure chiedendo gli Assi (4 \sa).
+
 
 \subsection{Mano bilanciata senza quarte nobili (e senza ambizioni di slam)}
 
-\begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
+\begin{twocol}
  2 \sa & 6-8 HCP, invitante manche.\\
  3 \sa & 9-12 HCP, a giocare.
-\end{tabular}
+\end{twocol}
 
 
-\subsection{1 SA - 2\c (\textit{Stayman})}
+\subsection{1 SA - 2 \c (Stayman)}
 
-Richiesta di quarte nobili, $\geq 7$ HCP. Risposte:\\
-\begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
+Richiesta di quarte nobili, $\geq 7$ HCP. Seguono le risposte.
+
+\begin{twocol}
  2 \d & Nessuna quarta nobile e minimo dell'apertura (15 HCP).\\
  2 \h & \h quarte, ma non \s quarte.\\
  2 \s & \s quarte, ma non \h quarte.\\
  2 SA & Nessuna quarta nobile e massimo dell'apertura (17 HCP).\\
  3 \c & 4\h\ - 4\s\ - 3\c\ - 2\d.\\
  3 \d & 4\h\ - 4\s\ - 3\d\ - 2\c.\\
-\end{tabular}
+\end{twocol}
 
-Se il richiedente aveva una quinta nobile \j, ma non c'\`e fit quarto dell'apertore, dichiara il primo \j disponibile (con senno). Se l'apertore ha fit (terzo) inizia le \textit{cue-bid}, altrimenti licita \sa.
+\noindent Esaminiamo gli sviluppi della Stayman.
 
-Con il fit su un nobile \j (dopo 2\j):
+\paragraph{Fit in un colore nobile.}
 
-\begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
+Con il fit su un nobile \j, dopo la risposta di 2 \j:
+\begin{twocol}
  3 \j & Seleziona \j come atout. Invitante manche.\\
  4 \j & A giocare.\\
- \textit{Cue-bid} & A partire da 3\s; sottintende il nobile dell'apertore (2\h o 2\s) come atout, verso la slam.\\
-\end{tabular}
+ Cue-bid & A partire da 3 \s. Sottintende il nobile dell'apertore come atout.\\
+\end{twocol}
 
-Con il fit su un nobile \j (dopo 3\c o 3\d): il rispondente dichiara \j, e l'apertore inizia le \textit{cue-bid}.
+\noindent Con il fit su un nobile \j, dopo la risposta di 3 \c o 3 \d: il rispondente dichiara \j, e l'apertore inizia le Cue-bid.
 
 
-Per giocare SA il rispondente licita:
+\paragraph{Richiesta dell'altro nobile.}
+Se il richiedente aveva una quinta nobile \j, ma non c'\`e fit quarto dell'apertore, può dichiarare il primo \j disponibile (con senno). Se l'apertore ha fit (terzo) inizia le Cue-bid, altrimenti licita \sa.
 
-\begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
+\paragraph{Gioco a SA.}
+Per giocare a SA il rispondente licita:
+\begin{twocol}
  2 \sa & (se possibile) 7-8 HCP, invitante manche.\\
  3 \sa & A giocare.\\
  4 \sa & Richiesta d'Assi.
-\end{tabular}
+\end{twocol}
 
-Richiesta dei minori (dopo 2\d, 2\h, 2\s, 2\sa), forzante manche: 3\c. Risposte:
+\paragraph{Richiesta dei minori.} Si può effettuare dopo le risposte di 2 \d, 2 \h, 2 \s o 2 \sa, dichiarando 3 \c. È forzante manche. Seguono le risposte.
+
 \begin{itemize}
- \item Se l'apertore ha negato quarte nobili (cioè dopo 2\d o 2\sa):
- 
-  \begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
-    3\d & \d almeno quarte, \c al massimo terze (5-3-3-2 oppure 4-3-3-3).\\
-    3\h & 4\c\ - 4\d\ - 3\h\ - 2\s.\\
-    3\s & 4\c\ - 4\d\ - 3\s\ - 2\h.\\
+ \item Se l'apertore ha negato quarte nobili (cioè dopo 2 \d o 2 \sa):
+  \begin{twocol}
+    3 \d & \d almeno quarte, \c al massimo terze (5-3-3-2 oppure 4-3-3-3).\\
+    3 \h & 4\c\ - 4\d\ - 3\h\ - 2\s.\\
+    3 \s & 4\c\ - 4\d\ - 3\s\ - 2\h.\\
     3 \sa & \c almeno quarte, \d al massimo terze (5-3-3-2 oppure 4-3-3-3).
-  \end{tabular}
+  \end{twocol}
 
- \item Se l'apertore ha un palo nobile quarto (cioè dopo 2\h o 2\s):
- 
-  \begin{tabular}{p{0.09\textwidth} p{0.7\textwidth}}
-    3\d & \d quarte (4-4-3-2).\\
-    3\h & Nessun minore quarto, mano minima.\\
-    3\s & Nessun minore quarto, mano massima.\\
+ \item Se l'apertore ha un palo nobile quarto (cioè dopo 2 \h o 2 \s):
+  \begin{twocol}
+    3 \d & \d quarte (4-4-3-2).\\
+    3 \h & Nessun minore quarto, mano minima.\\
+    3 \s & Nessun minore quarto, mano massima.\\
     3 \sa & \c quarte (4-4-3-2).
-  \end{tabular}
+  \end{twocol}
 \end{itemize}
 
-Dopo la richiesta dei minori:
+\noindent Seguono gli sviluppi dopo la richiesta dei minori.
 \begin{itemize}
  \item Per giocare a \sa: 3 \sa o passo, a giocare; 4 \sa richiesta d'Assi.
- \item Se c'è fit su un minore, dopo 3\d o 3 \sa (il fit non è ambiguo): \textit{cue-bid} nel primo maggiore disponibile, se possibile; altrimenti licitare il minore.
- L'apertore prosegue con la prima \textit{cue-bid}.
- \item Se c'è fit su un minore, dopo 3\h o 3\s nel primo caso: licitare il minore.
- L'apertore prosegue con la prima \textit{cue-bid}.
- \item Se si vuole segnalare un minore quinto \j (in cui l'apertore non ha mostrato quattro carte): dichiarare 4\j.
+ \item Se c'è fit su un minore, dopo 3 \d o 3 \sa (il fit non è ambiguo): Cue-bid nel primo maggiore disponibile, se possibile; altrimenti licitare il minore (il che nega le Cue-bid nei colori maggiori, per cui l'apertore deve chiudere a manche se non ha la copertura necessaria per sperare in uno slam).
+ L'apertore prosegue con la prima Cue-bid, oppure chiudendo a manche.
+ \item Se c'è fit su un minore, dopo 3 \h o 3 \s nel primo caso: licitare il minore.
+ L'apertore prosegue con la prima Cue-bid.
+ \item Se si vuole segnalare un minore quinto \j (in cui l'apertore non ha mostrato quattro carte): dichiarare 4 \j.
  L'apertore prosegue così:
  \begin{itemize}
-  \item 4($\bigstar+1$) senza fit terzo nel minore. Il rispondente dichiara 4 \sa (richiesta d'Assi), oppure 4($\bigstar+2$) per costringere l'apertore a licitare 4 \sa (a giocare).
-  \item La prima \textit{cue-bid} nobile disponibile (che non sia 4($\bigstar+1$)), senza superare 5\j.
+  \item 4 ($\bigstar+1$) senza fit terzo nel minore. Il rispondente dichiara 4 \sa (richiesta d'Assi), oppure 4 ($\bigstar+2$) per costringere l'apertore a licitare 4 \sa (a giocare).
+  \item La prima Cue-bid nobile (TODO: perché nobile???) disponibile che non sia 4 ($\bigstar+1$), ma comunque senza superare 5 \j.
   
  \end{itemize}
 \end{itemize}
 
 
+\pagebreak
 
-\section{Verso gli slam}
+\section{Verso lo slam}
 
-\subsection{\it{Cue-bid}}
+\subsection{Cue-bid}
 
-Non si gioca se il contratto sar\`a SA, e comunque occorre avere gi\`a stabilito l'atout. A partire da 3\s e salendo gradualmente si dichiara un seme \j (che non sia l'atout) se si possiede una delle seguenti (\textit{cue-bid} debole):
-\begin{itemize}
-\item Asso di \j.
-\item K di \j.
-\item Esattamente una carta di \j.
-\item Nessuna carta di \j.
-\end{itemize}
+Non si gioca se il contratto sarà a SA, e comunque occorre avere già stabilito l'atout (esplicitamente o implicitamente). A partire da 3 \s e salendo gradualmente si dichiara un seme \j (che non sia l'atout) se si possiede una delle seguenti (Cue-bid debole): Asso di \j, K di \j, singolo o vuoto a \j.
 
-Saltare un seme disponibile \`e come dichiarare che non si ha nessuna delle quattro condizioni precedenti in quel seme. Dichiarare SA \`e come dichiarare l'ultimo seme detto dal compagno, ma sono esclusi 4 SA e 5 SA. L'unica possibilit\`a \`e quindi 3\s\,- 3 SA, che dichiara \textit{cue-bid} (debole) a picche per entrambi i giocatori. Se un giocatore ripete un seme \j che egli stesso ha gi\`a dichiarato possiede una delle seguenti (\textit{cue-bid} forte):
-\begin{itemize}
-\item Asso di \j.
-\item Nessuna carta di \j.
-\end{itemize}
+Saltare un seme disponibile è come dichiarare che non si ha la Cue-bid in quel seme. Dichiarare SA è come dichiarare l'ultimo seme detto dal compagno, ma sono esclusi 4 SA e 5 SA (richiesta d'Assi e di Re). L'unica possibilità è quindi 3 \s\ - 3 SA, che dichiara Cue-bid (debole) a \s per entrambi i giocatori. Se un giocatore ripete un seme \j su cui ha già dato una Cue-bid, possiede una delle seguenti (Cue-bid forte): Asso di \j, singolo a \j.
 
-\subsection{Richiesta d'Assi e richiesta di Re}
+Quando un giocatore nega la Cue-bid in un seme, il compagno dovrebbe immediatamente chiudere a manche se a sua volta non possiede la Cue-bid in quel seme.
+Come corollario, continuare le Cue-bid dopo che il compagno ne ha negate alcune, equivale a dichiarare (implicitamente) le Cue-bid negate dal compagno.
 
-\paragraph{Con atout.} Ai fini delle richieste d'Assi e di Re il K di atout \`e considerato un Asso. In questo caso quindi ci sono 5 Assi e 3 Re. Risposte alla richiesta d'Assi (4 \sa):
- 
-\begin{tabular}{p{0.05\textwidth} p{0.7\textwidth}}
+Esempio (con atout \h): 3 \s\  (Cue-bid debole a \s) - 4 \d\ (nega la Cue-bid a \s e a \c) - 4 \s (Cue-bid forte a \s e debole a \c) - 5 \h\ (nega la Cue-bid forte a \d) - 6 \c\ (Cue-bid forte a \c) - \dots
+
+Ovviamente talvolta ha senso interrompere le Cue-bid per effettuare una richiesta d'Assi.
+
+
+\subsection{Richiesta d'Assi e richiesta di Re (Roman Key Card Blackwood)}
+
+\paragraph{Con atout.} Ai fini delle richieste d'Assi e di Re, il K di atout \`e considerato un Asso. In questo caso quindi ci sono 5 Assi e 3 Re. Seguono le risposte alla richiesta d'Assi (4 \sa).
+\begin{twocol}
 5 \c & 0 o 3 Assi.\\
 5 \d & 1 o 4 Assi.\\
 5 \h & 2 o 5 Assi, senza Q di atout.\\
 5 \s & 2 o 5 Assi, con Q di atout.\\
-\end{tabular}
+\end{twocol}
 
-Se si riceve una risposta che non dice nulla sulla Q di atout, si può rialzare di 1 per chiedere la Q di atout (di 2 se rialzando di 1 si cade sull'atout). La risposta è la seguente: si rialza di 1 per negare la Q, di 2 per dare la Q.
+\noindent Se si riceve una risposta che non dice nulla sulla Q di atout, si può rialzare di 1 per chiedere la Q di atout (di 2 se rialzando di 1 si cade sull'atout). La risposta è la seguente: si rialza di 1 per negare la Q, di 2 per dare la Q.
 
-Inoltre, con 5 \sa si può effettuare la richiesta di Re. Risposte:
+\smallspace
 
-\begin{tabular}{p{0.05\textwidth} p{0.7\textwidth}}
-6 \c & nessun Re.\\
+\noindent Inoltre, con 5 \sa si può effettuare la richiesta di Re. Seguono le risposte.
+
+\begin{twocol}
+6 \c & Nessun Re.\\
 6 \d & 1 Re.\\
 6 \h & 2 Re.\\
 6 \s & 3 Re. \\
-\end{tabular}
+\end{twocol}
 
 
-\paragraph{Senza atout.} Risposte alla richiesta d'Assi (4 \sa):
+\paragraph{Senza atout.} Seguono le risposte alla richiesta d'Assi (4 \sa).
 
-\begin{tabular}{p{0.05\textwidth} p{0.7\textwidth}}
+\begin{twocol}
 5 \c & 0 o 3 Assi.\\
 5 \d & 1 o 4 Assi.\\
 5 \h & 2 Assi.\\
-\end{tabular}
+\end{twocol}
 
-Il richiedente può successivamente licitare 5\s per costringere il rispondente a licitare 5 \sa (a giocare).
+\noindent Il richiedente può successivamente licitare 5 \s per costringere il rispondente a licitare 5 \sa (a giocare).
 
-In alternativa si può effettuare la richiesta di Re, dichiarando 5 \sa. Risposte:
+\smallspace
 
-\begin{tabular}{p{0.05\textwidth} p{0.7\textwidth}}
+\noindent In alternativa si può effettuare la richiesta di Re, dichiarando 5 \sa. Seguono le risposte.
+
+\begin{twocol}
 6 \c & Nessun Re.\\
 6 \d & 1 Re.\\
 6 \h & 2 Re.\\
 6 \s & 3 Re. \\
 6 \sa & 4 Re.
-\end{tabular}
+\end{twocol}
 
 
 

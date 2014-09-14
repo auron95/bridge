@@ -10,10 +10,10 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{xspace}
+\usepackage{color}
 
 \topmargin -1cm
 \oddsidemargin -0.5cm
-%\evensidemargin	-1cm
 \textwidth 17cm
 
 
@@ -27,6 +27,9 @@
 \newcommand{\smallspace}{\vskip0.3cm}
 
 \renewcommand{\tabcolsep}{0.3cm}
+
+\newcommand{\note}[1]{\textcolor{red}{#1}}
+
 
 \newenvironment{twocol}
   {\smallspace\noindent\begin{tabular}{l p{0.8\textwidth}}}
@@ -50,7 +53,7 @@
 \paragraph{Algoritmo generale.}
 Si licita il colore pi\`u lungo, escludendo \s e \h se non sono almeno quinte e le \d se non sono almeno quarte.
 In caso di parit\`a di lunghezza dei semi pi\`u lunghi, si dichiara il pi\`u alto se sono almeno quinti e si dichiara il pi\`u basso se sono quarti.
-Nota: con 4 carte a \s e \h, 3 a \d\ e 2 a \c, si apre di 1\c.
+Nota: con 4\s\ - 4\h\ - 3\d\ - 2\c, si apre di 1\c.
 
 \subsection{Mani bilanciate}
 (4-3-3-3, 4-4-3-2, 5-3-3-2)
@@ -62,7 +65,7 @@ Nota: con 4 carte a \s e \h, 3 a \d\ e 2 a \c, si apre di 1\c.
  18-19 & 1 \j & 5-3-3-2, \j \`e il seme quinto. Poi \sa a salto.\\
        & 1 \c & Tutte le altre distribuzioni. Poi \sa a salto.\\
  20-22 & 2 \sa & \\
- 23+ & 2 \c & 
+ 23+ & 2 \c & \note{Da rivedere}
 \end{threecol}
 
 
@@ -78,7 +81,7 @@ Nota: con 4 carte a \s e \h, 3 a \d\ e 2 a \c, si apre di 1\c.
 (5-4-3-1, 5-4-2-2, 6-4-2-1, 5-5-2-1, \dots)
 
 \begin{threecol}
- 12+ & 1 \j & \j \`e il colore pi\`u lungo; in caso di parit\`a (5-5 o 6-6) si licita il colore pi\`u alto (in accordo con l'algoritmo generale). Sulla ridichiarazione, per licitare il secondo colore a livello di 2 in modo ascendente (es: 1\d{} - 1\s{} - 2\h), bisogna avere 16+ HCP (rever).
+ 12+ & 1 \j & \j \`e il colore pi\`u lungo; in caso di parit\`a (5-5 o 6-6) si licita il colore pi\`u alto (in accordo con l'algoritmo generale). Sulla ridichiarazione, per licitare il secondo colore a livello di 2 in modo ascendente (es: 1\d{} - 1\s{} - 2\h), bisogna avere 16+ HCP (Rever).
 \end{threecol}
 
 
@@ -98,6 +101,9 @@ Nota: con 4 carte a \s e \h, 3 a \d\ e 2 a \c, si apre di 1\c.
  3 \sa & Minore almeno settimo chiuso (con A, K, Q) e non pi\`u di una dama negli altri tre colori.
 \end{twocol}
 
+
+
+\pagebreak
 
 \section{Risposte sull'apertura di 1 a colore}
 
@@ -119,14 +125,16 @@ Si risponde tendenzialmente con $\geq 5$ punti oppure con un Asso.
 
 \subsection{Con fit su un colore maggiore \j}
 
+\note{Da rivedere}
 \begin{twocol}
- 2 \sa & 10+ HCP, fit almeno quarto.\\
- 2 \j  & 7-10 HCP, fit almeno terzo (tendenzialmente proprio terzo).\\
- 3 \j  & 7-9 HCP, fit almeno quarto.\\
- 4 \j  & Appoggio lungo, mano scarsa (?).\\
+ 2 \j  & 5-10 HCP, fit terzo.\\
+ 3 \j  & 5-9 HCP, fit almeno quarto.\\
+ 4 \j  & 5-9 HCP, fit almeno quinto.\\
+ 2 \sa & 10+ HCP, fit almeno quarto (Jordan).\\
+ Cue-bid & 12+ HCP, fit terzo. Forzante manche.
 \end{twocol}
 
-Con un fit esattamente terzo e tanti punti, si pu\`o rispondere: 1 \s (sull'apertura di 1 \h, se si hanno le picche almeno quarte), 2 \c, oppure con una cue-bid (a partire da 3 \s \,?).
+Con un fit esattamente terzo e tanti punti, si pu\`o rispondere: 1 \s (sull'apertura di 1 \h, se si hanno le picche almeno quarte), 2 \c, oppure con una cue-bid (a partire da 3 \s).
 
 
 \subsection{Con fit sulle \d}

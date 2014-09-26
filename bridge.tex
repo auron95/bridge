@@ -67,7 +67,7 @@ Nota: con 4\s\ - 4\h\ - 3\d\ - 2\c, si apre di 1 \c.
  12-14 & 1 \j & Si licita seguendo l'algoritmo generale.\\
  15-17 & 1 \sa & Solo se la quinta non \`e nobile.\\
  18-19 & 1 \j & 5-3-3-2, \j \`e il seme quinto (anche nobile). Poi \sa a salto sulla risposta di 1 a colore.\\
-       & 1 \c & Tutte le altre distribuzioni. Poi \sa a salto sulla risposta di 1 a colore.\\
+       & 1 \c & Tutte le altre distribuzioni. Poi \sa a salto sulla risposta di 1 a colore. \note{Come ci si comporta su una risposta che non è di 1 a colore?}\\
  20-22 & 2 \sa & Solo se la quinta non è nobile.\\
  23+ & 2 \c & \note{Da rivedere}
 \end{threecol}
@@ -125,11 +125,12 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
  
  \item Ripetere un colore allunga di 1 il numero di carte.
  
- Il caso in cui l'apertore apre di 1 \c e poi ripete le \c è tuttavia un po' particolare (perché la prima dichiarazione garantisce solo 2 carte a \c). \note{Vale forse la pena di analizzare un po' questi casi, perché comunque si possono dedurre un bel po' di informazioni.}
- 
  Esempio: 1 \h\ - 1 \sa\ - 2 \s\ - 2 \sa\ - 3 \h dà Rever e almeno 7 carte a \h e 5 a \s (infatti 2 \s garantisce almeno 5 carte di \s perché il rispondente ne ha al massimo 3, per cui l'apertura di 1 \h diventa garanzia di almeno 6 carte di \h).
- Se, dopo 1 \h\ - 1 \sa, l'apertore ha 16+ HCP e solo 4 carte di \s, non può dire \hbox{2 \s} (dice 3 \h con almeno 6 carte di \h, 3 \j con un minore \j almeno quarto, altrimenti 2 \sa o 3 \sa a seconda dei punti -- dicendo 2 \sa rinuncia a dare Rever e invita a 3 \sa).
- \note{È forse meglio decidere che 2 \s lo si può dire anche con solo 4 carte di \s? Perché nel caso tra parentesi qua sopra si rischia di dichiarare male. O forse è meglio dire che 3 \c è Rever ma senza necessariamente avere le \c, tanto a nessuno interessano le \c. Quest'ultima possibilità è quella che mi piace di più (bruttissimo dire 2 \s con solo 4 carte, se sai che il tuo compagno ne ha meno di 4!), però vorrei sentire il parere di Ugo.}
+ 
+ {\bf Attenzione:} il caso in cui l'apertore apre di 1 \c e poi ripete le \c è un po' particolare, perché la prima dichiarazione garantisce solo 2 carte a \c. In ogni caso, la ripetizione delle \c garantisce almeno 5 carte, perché non vale la pena di ripetere le \c se si hanno solo 4 carte (piuttosto si licita \sa, che tendenzialmente fa capire che si hanno 4 carte a \c dal momento che non se ne hanno negli altri semi).
+ 
+ Per esempio, 1 \c\ - 1 \h\ - 2 \c dà meno di 16 HCP e almeno 5 carte di \c (se fossero solo 4, ad esempio nella distribuzione 4\c\ - 4\d\ - 3\h\ - 2\s, si liciterebbe invece 1 \sa).
+ Invece 1 \c\ - 1 \h\ - 3 \c dà Rever e almeno 6 carte di \c (infatti, se le carte di \c fossero solo 5, o si avrebbe un altro palo da licitare oppure la mano sarebbe bilanciata).
  
  \item Appoggiare un colore licitato dal compagno dà il fit (almeno $8-k$ carte, dove $k$ è il numero di carte che sei sicuro che il tuo compagno abbia in quel colore).
  \item Licitare un colore nobile ha la priorità sul dare il fit in un colore minore. Dare il fit su un colore nobile ha la priorità su qualsiasi altra cosa.
@@ -137,15 +138,21 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
  Per esempio, se l'apertore ha 4\c\ - 4\d\ - 4\h\ - 1\s e ha aperto di 1 \c (quindi ha 16+ HCP, vedi apertura tricolore), sulla risposta di 1 \d dichiara 2 \h (Rever, \h quarte) e non 3 \d (Rever, fit a \d).
  Il fit a \d può essere dato dopo, nel caso in cui non si trovi fit a \h.
  
- \item {\bf Solo per l'apertore:} dopo una risposta a livello di 1, superare strettamente 2 \j (dove \j è il colore di apertura) dà Rever, e va fatto se e solo se si hanno 16+ HCP.
+ \item Solo per l'apertore: dopo una risposta a livello di 1, superare strettamente 2 \j (dove \j è il colore di apertura) dà Rever, e va fatto se e solo se si hanno 16+ HCP.
  In questo modo, dopo la seconda licita dell'apertore, il rispondente sa se l'apertore ha 12-15 HCP oppure 16+ HCP.
  
  {\bf Eccezione:} se l'apertore vuole dare il fit nel colore del rispondente, lo fa a livello per non dare Rever, e lo fa a salto per dare Rever. In particolare, 1 \h\ - 1 \s\ - 2 \s non è Rever.
  
-  Esempi di Rever: 1 \d\ - 1 \h\ - 2 \s (con \d e \s almeno quarte); 1 \h\ - 1 \sa\ - 3 \h (con \h almeno seste); \hbox{1 \h}\ - 1 \s\ - 3 \s (con \h almeno quinte e \s almeno quarte).
-
+ {\bf In che colore dare Rever.} Se si vuole dare Rever (16+ HCP), allora ci si dovrebbe trovare in uno dei seguenti casi: mano bilanciata (allora si è seguito l'algoritmo per le aperture con mano bilanciata); mano monocolore (si hanno almeno 6 carte nel colore, quindi si ripete quello); mano bicolore o tricolore (si licita uno degli altri colori). Purtroppo non sempre ci si trova in questi casi.
+ Ad esempio si può avere una 5-3-3-2 con quinta nobile e 16-17 HCP (in questo caso si dà Rever nel migliore dei minori, anche se è solo terzo);
+ oppure si può essere nel caso 1 \h\ - 1 \sa con cinque carte di \h e quattro di \s, in cui non si possono dire le \s perché il rispondente ne ha meno di 4 (anche in questo caso si dà Rever nel migliore dei minori -- anche se è solo secondo -- oppure con non tanti punti si rinuncia al Rever dichiarando 2 \sa, che è invitante manche).
  
- \note{Indagare casi come 1\h\ - 1 \sa\ - 2 \sa\, / 3 \sa, che dovrebbero essere rispettivamente invitante manche e Rever a SA (il secondo caso dovrebbe essere il fall-back per l'apertura 5-3-3-2 da 18-19 HCP).}
+ {\bf Morale della favola:} il Rever in un colore minore talvolta non garantisce 4 carte nel colore. È compito del rispondente ragionare e capire se ci si può trovare in uno di questi casi.
+ 
+ Esempi di Rever: 1 \d\ - 1 \h\ - 2 \s (con \d e \s almeno quarte); 1 \h\ - 1 \sa\ - 3 \h (con \h almeno seste); \hbox{1 \h}\ - 1 \s\ - 3 \s (con \h almeno quinte e \s almeno quarte).
+ 
+ Altro esempio: se l'apertore ha meno di 16 HCP, 6 carte di \h e 5 carte di \s, su 1 \h\ - 1 \sa deve rispondere 2 \h e non 2 \s. Questo è un po' triste, però non ci si può fare nulla.
+
 \end{itemize}
 
 

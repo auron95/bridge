@@ -38,7 +38,7 @@
   {\end{tabular}\smallspace}
 
 \newenvironment{threecol}
-  {\smallspace\noindent\begin{tabular}{l l p{0.7\textwidth}}}
+  {\smallspace\noindent\begin{tabular}{l l p{0.8\textwidth}}}
   {\end{tabular}\smallspace}
 
   
@@ -69,7 +69,7 @@ Nota: con 4\s\ - 4\h\ - 3\d\ - 2\c, si apre di 1 \c.
  12-14 & 1 \j & Si licita seguendo l'algoritmo generale.\\
  15-17 & 1 \sa & Solo se la quinta non \`e nobile.\\
  18-19 & 1 \j & 5-3-3-2, \j \`e il seme quinto (anche nobile). Poi \sa a salto sulla risposta di 1 a colore.\\
-       & 1 \c & Tutte le altre distribuzioni. Poi \sa a salto sulla risposta di 1 a colore. \note{Come ci si comporta su una risposta che non è di 1 a colore?}\\
+       & 1 \c & Tutte le altre distribuzioni. Poi \sa a salto sulla risposta a livello di 1 (es: 1 \c\ - 1 \s\ - \mbox{2 \sa}; 1 \c\ - 1 \sa\ - 3 \sa).\\
  20-22 & 2 \sa & Solo se la quinta non è nobile.\\
  23+ & 2 \c & Forzante manche.
 \end{threecol}
@@ -107,7 +107,6 @@ Nota: con 4\s\ - 4\h\ - 3\d\ - 2\c, si apre di 1 \c.
 \begin{twocol}
  2 \j & 6-10 HCP, con \j colore esattamente sesto diverso da \c.\\
  3/4 \j & Colore almeno settimo (meglio se a compagno passato).\\
- 3 \sa & Minore almeno settimo chiuso (con A, K, Q) e non pi\`u di una dama negli altri tre colori. \note{Da rivedere.}
 \end{twocol}
 
 
@@ -173,12 +172,12 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
   
   \item Per non dare il fit ma dare Rever: distinguiamo i vari casi.
   
-  Nel caso di una distribuzione monocolore, si ripete il proprio colore a salto, cioè a livello di 3 (es: \mbox{1 \s}\ - 2 \d\ - 3 \s; \note{gestire il caso particolare 1 \c\ - 2 \c}).
+  Nel caso di una distribuzione monocolore, si ripete il proprio colore a salto, cioè a livello di 3 (es: \mbox{1 \s}\ - 2 \d\ - 3 \s). Nel caso particolare 1 \c\ - 2 \c, l'apertore licita 4 \c (ha almeno 6 carte di fiori, il rispondente ne ha almeno 4 con 12 HCP; si giocherà a fiori).
   
   Nel caso di una distribuzione bicolore o tricolore, si dice il secondo colore a livello di 3 (es: 1 \s\ - \mbox{2 \c}\ - 3 \d, oppure 1 \s\ - 2 \d\ - 3 \c).
   
   Rimane il caso di una distribuzione bilanciata, che (data l'apertura di 1 a colore) deve rientrare in uno dei seguenti due casi: 5-3-3-2 con quinta nobile e 15-17 HCP (in realtà 16-17, se si vuole dare Rever) oppure una qualsiasi bilanciata con 18-19 HCP. Nel primo caso, si dà Rever licitando un minore a livello di 3 (es: 1 \s\ - 2 \d\ - 3 \c), scegliendo il migliore tra i minori non licitati dal compagno (in questo modo si lasciano libere le dichiarazioni di 2 \sa, invitante manche, e 3 \sa, con circa 14-15 HCP o forse anche con 13 HCP).
-  Nel secondo caso la licita è stata 1 \c\ - 2 \c \note{E ora che si fa?}
+  Nel secondo caso la licita è stata 1 \c\ - 2 \c, e l'apertore licita 2 \sa per segnalare la forza della mano (non è un invito, perché entrambi sanno che la manche è assicurata!).
   
   \item Per non dare né fit né Rever: si licita un colore a livello di 2 (quello di apertura o un altro), oppure 2 \sa (12 HCP oppure 13 brutti) o 3 \sa.
   
@@ -195,13 +194,21 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
 \begin{itemize}
  \item Se possibile, dire un colore almeno quarto a livello di 1 (il pi\`u lungo, e in caso di parit\`a come da algoritmo generale).
  \item Altrimenti:
+ \begin{itemize}
+  \item Su 1 \d, 1 \h, 1 \s:
   \begin{twocol}
-    1 \d & 5-6 HCP, solo sull'apertura di 1 \c (anche con zero carte di \d!). Il senso è questo: evitare di dire 1 \sa con pochi punti, in modo che si possa licitare 1 \c\ - 1 \d\ - 2 \sa se l'apertore ha una bilanciata con 18-19 HCP. Inoltre, su 1 \c\ - 1 \sa in questo modo si garantiscono 7-10 HCP (il che rende più precisa la ricerca della manche a 3 \sa). \note{In tutto il pdf bisogna modificare gli esempi che iniziano con 1 \c\ - 1 \d.}\\
-    1 \sa & $\leq 10$ HCP, in tutti i casi diversi dal precedente. \\
+    1 \sa & $\leq 10$ HCP.\\
     2 \h & $\geq 11$ HCP, con le \h almeno quinte.\\
     2 \d & $\geq 11$ HCP, con le \d almeno quarte, se non si è nel caso precedente.\\
     2 \c & $\geq 11$ HCP, in tutti gli altri casi.\\
   \end{twocol}
+  \item Su 1 \c:
+  \begin{twocol}
+    1 \d & 5-6 HCP, anche con zero carte di \d!\\
+    1 \sa & 7-11 HCP.\\
+    2 \c & $\geq 12$ HCP.\\
+   \end{twocol}
+ \end{itemize}
 \end{itemize}
 
 
@@ -359,17 +366,34 @@ Per giocare a SA il rispondente licita:
 
 \section{Sviluppi su apertura forte bilanciata}
 
-\paragraph{Transfer.} Sull'apertura 2 \sa, con mano sbilanciata il rispondente può licitare una Transfer.
+\paragraph{Transfer.} Sull'apertura 2 \sa, con mano sbilanciata (seme almeno sesto) il rispondente può licitare una Transfer.
 
 \paragraph{Stayman avanzata.} Su 2 \sa (20-22 HCP), oppure 1 \c\ - 1 \j\ - 2 \sa (18-19 HCP), il rispondente può giocare 3 \c (Stayman avanzata). L'apertore risponde come segue.
 \begin{twocol}
  3 \d & Entrambe le quarte nobili.\\
  3 \h & \h quarte, ma non \s quarte.\\
  3 \s & \s quarte, ma non \h quarte.\\
- 3 \sa & Nessuna quarta nobile.
+ 3 \sa & Nessuna quarta nobile.\\
 \end{twocol}
 
+Su 3 \h o 3\s il rispondente può cercare fit in un altro seme (almeno quinto) licitando una ``transfer ritardata'': 3 \s per le \c (solo su 3 \h), 4 \c per le \d, 4 \d per le \h, 4 \h per le \s. 
 
+\pagebreak
+
+\section{Sviluppi sulle sottoaperture}
+
+Sulle sottoaperture le Cue-bid si iniziano solo a salto. Dichiarare 4 \sa sottintende il seme dell'apertore come atout. Ogni altra dichiarazione a colore è naturale.
+
+\paragraph{Su 2 \j.} Se il rispondente ha almeno 14 HCP può dichiarare 2 \sa. Seguono le risposte.
+\begin{twocol}
+ 3 \c & Mano minima, carte deboli a \j.\\
+ 3 \d & Mano minima, carte buone a \j.\\
+ 3 \h & Mano massima, carte deboli a \j.\\
+ 3 \s & Mano massima, carte buone a \j.\\
+ 3 \sa & A, K, Q di \j.
+\end{twocol}
+
+Se dopo 2 \sa c'è un intervento, PASS dà mano minima, X o XX mano massima.
 
 \pagebreak
 
@@ -385,6 +409,9 @@ Quando un giocatore nega la Cue-bid in un seme, il compagno dovrebbe immediatame
 Come corollario, continuare le Cue-bid dopo che il compagno ne ha negate alcune, equivale a dichiarare (implicitamente) le Cue-bid negate dal compagno.
 
 Esempio (con atout \h): 3 \s\  (Cue-bid debole a \s) - 4 \d\ (nega la Cue-bid a \s e a \c) - 4 \s (Cue-bid forte a \s e debole a \c) - 5 \h\ (nega la Cue-bid forte a \d) - 6 \c\ (Cue-bid forte a \c) - \dots
+
+\paragraph{Cue-bid avanzate} Se \j è un seme diverso dall'atout, un giocatore A si dice \j-completo se ha dato Cue-bid forte a \j oppure ha già negato una Cue-bid a \j. Se A è \j-completo, \j diventa Cue-bid nel colore in cui ha dato meno informazioni (in caso di parità, il più basso in rango). Come corollario, se A salta \j sta negando una Cue-bid.
+\vspace{4mm}
 
 Ovviamente talvolta ha senso interrompere le Cue-bid per effettuare una richiesta d'Assi.
 
@@ -403,12 +430,12 @@ Ovviamente talvolta ha senso interrompere le Cue-bid per effettuare una richiest
 
 \begin{itemize}
  \item La prima licita ad atout disponibile: niente Q di atout.
- \item La prima licita a \j disponibile (ma necessariamente inferiore a \note{6ATOUT}): Q di atout e K di \j.
+ \item La prima licita a \j disponibile (ma necessariamente inferiore a 6 nel colore di atout): Q di atout e K di \j.
  \item 5 \sa: Q di atout, e nessun K oppure nessun K dichiarabile secondo il punto precedente.
 \end{itemize}
 
-Se l'atout è \s, questa dichiarazione permette di dare il K di ogni seme, (nel caso in cui il rispondente possieda la Q di \s). Se l'atout è \h, è comunque sempre possibile sapere i K del rispondente mediante questa tecnica: con richiesta 5\s, la risposta 5 \sa potrebbe significare nessun K, ma anche K di \s.
-Allora il richiedente domanda 6\c, e il rispondente licita 6\d se non possiede il K di \s, 6\h se possiede il K di \s.
+Se l'atout è \s, questa dichiarazione permette di dare il K di ogni seme, (nel caso in cui il rispondente possieda la Q di \s). Se l'atout è \h, è comunque sempre possibile sapere i K del rispondente mediante questa tecnica: con richiesta 5 \s, la risposta 5 \sa potrebbe significare nessun K, ma anche K di \s.
+Allora il richiedente domanda 6 \c, e il rispondente licita 6 \d se non possiede il K di \s, 6 \h se possiede il K di \s.
 
 
 \smallspace

@@ -171,11 +171,11 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
   Esempi: 1 \s\ - 2 \d\ - 3 \d (l'apertore ha 12-15 HCP, fit quarto a \d, e tendenzialmente esattamente 5 carte di \s e al massimo 3 carte di \h);
   1 \h\ - 2 \d\ - 3 \d (l'apertore ha 12-15 HCP, fit quarto a \d, e tendenzialmente esattamente 5 carte di \h e al massimo 4 di \s\ -- infatti il rispondente ha negato 4 carte di \s, per cui l'apertore licita 2 \s solo se ne ha almeno 5).
   
-  \item Per non dare il fit ma dare Rever: nel caso di una distribuzione monocolore, si ripete il proprio colore a salto, cioè a livello di 3 (es: 1 \s\ - 2 \d\ - 3 \s; \note{gestire il caso particolare 1 \c\ - 2 \c}); nel caso di una distribuzione bicolore o tricolore, si dice il secondo colore a livello di 3 (es: 1 \s\ - 2 \c\ - 3 \d, oppure 1 \s\ - 2 \d\ - 3 \c). Rimane il caso di una distribuzione bilanciata, che (data l'apertura di 1 a colore) deve rientrare in uno dei seguenti due casi: 5-3-3-2 con quinta nobile e 15-17 HCP (in realtà 16-17, se si vuole dare Rever) oppure una qualsiasi bilanciata con 18-19 HCP. Nel caso bilanciato, si dà Rever licitando 3 \sa (es: 1 \s\ - 2 \d\ - 3 \sa). \note{Questa cosa non mi piace molto: uno potrebbe voler dire 3 \sa senza Rever, per fermarsi a manche. Probabilmente va cambiato con un Rever in un minore fasullo.}
+  \item Per non dare il fit ma dare Rever: nel caso di una distribuzione monocolore, si ripete il proprio colore a salto, cioè a livello di 3 (es: 1 \s\ - 2 \d\ - 3 \s; \note{gestire il caso particolare 1 \c\ - 2 \c}); nel caso di una distribuzione bicolore o tricolore, si dice il secondo colore a livello di 3 (es: 1 \s\ - 2 \c\ - 3 \d, oppure 1 \s\ - 2 \d\ - 3 \c). Rimane il caso di una distribuzione bilanciata, che (data l'apertura di 1 a colore) deve rientrare in uno dei seguenti due casi: 5-3-3-2 con quinta nobile e 15-17 HCP (in realtà 16-17, se si vuole dare Rever) oppure una qualsiasi bilanciata con 18-19 HCP. Nel caso bilanciato, si dà Rever licitando un minore a livello di 3 (es: 1 \s\ - 2 \d\ - 3 \c;\, 1 \d\ - 2 \c\ - 3 \c), scegliendo il migliore tra i minori non ancora licitati oppure le \c (in questo modo si lasciano libere le dichiarazioni di 2 \sa, invitante manche, e 3 \sa, con circa 14-15 HCP o forse anche con 13 HCP).
   
   \item Per non dare né fit né Rever: si licita un colore a livello di 2 (quello di apertura o un altro), oppure 2 \sa (12 HCP oppure 13 brutti) o 3 \sa.
   
-  \item Per dare sia fit che Rever: si licita la prima cue-bid, a partire da 3 \s. \note{Mi pare che, partendo da 3 \s, non ci sia ambiguità con i casi precedenti.}
+  \item Per dare sia fit che Rever: si licita la prima cue-bid, a partire da 4 \c.
   
   Attenzione: non è detto che sia ragionevole dare il fit in un minore in questo modo. Infatti, le cue-bid rendono più complicato giocare a \sa (manche o slam). A seconda dei casi, può essere preferibile dare Rever fingendo di non avere il fit (soprattutto se la mano è bilanciata e il fit è corto).
  \end{itemize}
@@ -186,14 +186,15 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
 \subsection{Senza fit}
 
 \begin{itemize}
- \item Se possibile, dire un colore a livello di 1 (il pi\`u lungo, e in caso di parit\`a come da algoritmo generale).
+ \item Se possibile, dire un colore almeno quarto a livello di 1 (il pi\`u lungo, e in caso di parit\`a come da algoritmo generale).
  \item Altrimenti:
-  \begin{threecol}
-    $\leq 10$ HCP & 1 \sa & \\
-    $\geq 11$ HCP & 2 \h & Con le \h almeno quinte.\\
-    & 2 \d & Con le \d almeno quarte, se non si è nel caso precedente.\\
-    & 2 \c & In tutti gli altri casi.\\
-  \end{threecol}
+  \begin{twocol}
+    1 \d & 5-6 HCP, solo sull'apertura di 1 \c (anche con zero carte di \d!).\\
+    1 \sa & $\leq 10$ HCP, in tutti i casi diversi dal precedente. \\
+    2 \h & $\geq 11$ HCP, con le \h almeno quinte.\\
+    2 \d & $\geq 11$ HCP, con le \d almeno quarte, se non si è nel caso precedente.\\
+    2 \c & $\geq 11$ HCP, in tutti gli altri casi.\\
+  \end{twocol}
 \end{itemize}
 
 

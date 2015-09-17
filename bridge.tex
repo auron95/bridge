@@ -144,7 +144,7 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
  Per esempio, 1 \c\ - 1 \h\ - 2 \c dà meno di 16 HCP e almeno 5 carte di \c (se fossero solo 4, ad esempio nella distribuzione 4\c\ - 4\d\ - 3\h\ - 2\s, si liciterebbe invece 1 \sa).
  Invece 1 \c\ - 1 \h\ - 3 \c dà Rever e almeno 6 carte di \c (infatti, se le carte di \c fossero solo 5, o si avrebbe un altro palo da licitare oppure la mano sarebbe bilanciata).
  
- \item Appoggiare un colore licitato dal compagno dà il fit (almeno $8-k$ carte, dove $k$ è il numero di carte che sei sicuro che il tuo compagno abbia in quel colore).
+%  \item Appoggiare un colore licitato dal compagno dà il fit (almeno $8-k$ carte, dove $k$ è il numero di carte che sei sicuro che il tuo compagno abbia in quel colore).
  \item Licitare un colore nobile ha la priorità sul dare il fit in un colore minore. Dare il fit su un colore nobile ha la priorità su qualsiasi altra cosa.
  
  Per esempio, se l'apertore ha 4\c\ - 4\d\ - 4\h\ - 1\s e ha aperto di 1 \c (quindi ha 16+ HCP, vedi apertura tricolore), sulla risposta di 1 \d dichiara 2 \h (Rever, \h quarte) e non 3 \d (Rever, fit a \d).
@@ -178,7 +178,7 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
   
   \item Per non dare il fit ma dare Rever: distinguiamo i vari casi.
   
-  Nel caso di una distribuzione monocolore, si ripete il proprio colore a salto, cioè a livello di 3 (es: \mbox{1 \s}\ - 2 \d\ - 3 \s). Nel caso particolare 1 \c\ - 2 \c, l'apertore licita 4 \c (ha almeno 6 carte di fiori, il rispondente ne ha almeno 4 con 12 HCP; si giocherà a fiori).
+  Nel caso di una distribuzione monocolore, si ripete il proprio colore a salto, cioè a livello di 3 (es: \mbox{1 \s}\ - 2 \d\ - 3 \s). Nel caso particolare 1 \c\ - 2 \c, l'apertore licita 4 \c (ha almeno 6 carte di fiori,\footnote{Con meno di 6 carte di \c, l'apertore avrebbe una mano bilanciata oppure bicolore.} il rispondente ne ha almeno 4 con 12 HCP; si giocherà a fiori).
   
   Nel caso di una distribuzione bicolore o tricolore, si dice il secondo colore a livello di 3 (es: 1 \s\ - \mbox{2 \c}\ - 3 \d, oppure 1 \s\ - 2 \d\ - 3 \c).
   
@@ -212,7 +212,7 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
   \begin{twocol}
     1 \d & 5-6 HCP, anche con zero carte di \d!\\
     1 \sa & 7-11 HCP.\\
-    2 \c & 12+ HCP.\\
+    2 \c & 12+ HCP (in questo modo la manche è assicurata, e la ridichiarazione di 2 \sa dell'apertore dà 18-19 HCP con mano bilanciata).\\
    \end{twocol}
  \end{itemize}
 \end{itemize}
@@ -232,13 +232,13 @@ Se il rispondente vuole dare il fit nel secondo colore \j licitato dall'apertore
 \subsection{Con fit su un colore maggiore \j}
 \begin{twocol}
  2 \j  & 5-7 HCP, fit terzo.\\
- 3 \c & 8-9 HCP, fit terzo.\\
- 3 \j  & 5-9 HCP, fit quarto.\\
- 4 \j  & 5-9 HCP, fit almeno quinto.\\
+ 3 \c & 8-9 HCP.\\
+ 3 \j  & 5-7 HCP, fit quarto (oppure fit quinto in seconda).\\
+ 4 \j  & 5-7 HCP, fit almeno quinto.\\
  2 \sa & 10+ HCP, fit almeno terzo (Jordan).\\
  Cue-bid & Fit almeno terzo, forzante manche, lasciato alla fantasia del rispondente. In questo caso le Cue-bid partono da 3 \d.
 \end{twocol}
-\note{Splinter?}
+% \note{Splinter?}
 
 \paragraph{Sviluppo su 2 \sa (Jordan).} Su 1 \s\ - 2 \sa, l'apertore licita
 \begin{twocol}
@@ -320,7 +320,22 @@ Attenzione: le risposte che garantiscono un singolo o un vuoto danno implicitame
 
 \subsection{Sviluppi dopo la risposta di 1 \sa}
 
-\note{TODO} (con la cosa buffa di 2 \c\ che dà rever 16-18 quasi bilanciato).
+Sull'apertura di 1 \d, 1 \h o 1 \s:
+\begin{twocol}
+ 2 \c & Rever generico con 16-18 HCP.\\
+ 2 \sa & 14-15 HCP, invitante manche a \sa.\\
+ Altro a livello di 2 & Come da algoritmo generale.\\
+ Qualcosa a livello di 3 & Come da algoritmo generale, ma con 19+ HCP.
+\end{twocol}
+
+\noindent Sull'apertura di 1 \c:
+\begin{twocol}
+  2 \c & 13-14 HCP, invitante manche a \sa.\\
+  2 \sa & 15-16 HCP, invitante manche a \sa.\\
+  3 \sa & 17+ HCP, da passare.\\
+  Altro & Come da algoritmo generale.
+\end{twocol}
+
 
 
 
@@ -494,7 +509,21 @@ Per giocare a SA il rispondente licita:
 Ricordiamo che l'apertura di 2 \c si effettua con 23+ HCP e mano bilanciata, oppure con una mano (anche sbilanciata) con cui si può giocare la manche anche se il compagno ha delle pessime carte.
 È l'unica apertura sulla quale il compagno è obbligato a rispondere, anche con 0 HCP.
 Come filosofia generale, è il compagno dell'apertore a condurre la dichiarazione.
-In ogni caso, dopo l'apertura di 2 \c ogni licita sotto la manche è automaticamente forzante.
+In ogni caso, dopo l'apertura di 2 \c ogni licita sotto la manche è automaticamente forzante (con unica eccezione 2 \c\ - 2 \d\ - 2 \sa, vedi oltre).
+
+Seguono le risposte.
+\begin{twocol}
+  2 \d & 0-6 HCP.\\
+  2 \h/\s & 7+ HCP, nobile almeno quarto.\\
+  2 \sa & 7+ HCP, mano bilanciata (nobili al più terzi, minori al più quarti).\\
+  3 \c/\d & 7+ HCP, minore almeno quinto, nessun nobile quarto.\\
+\end{twocol}
+
+Sulla risposta di 2 \d, se l'apertore ha mano bilanciata licita 2 \sa (passabile) nel caso in cui non può garantire la manche a \sa, altrimenti licita 3 \sa.
+
+Sulle risposte di 2 \d/\h/\s, se l'apertore ha mano bilanciata licita 2 \sa (oppure 3 \sa nel caso descritto sopra); il rispondente può allora licitare 3 \c (Stayman avanzata).
+
+In tutti gli altri casi si prosegue in modo naturale.
 
 
 \pagebreak
@@ -535,9 +564,9 @@ Esempio (con atout \h): 3 \s\  (Cue-bid debole a \s) - 4 \d\ (nega la Cue-bid a 
 Ovviamente talvolta ha senso interrompere le Cue-bid per effettuare una richiesta d'Assi.
 
 
-\subsection{Richieste d'Assi e di Re (Roman Key Card Blackwood)}
+\subsection{Richieste d'Assi e di Re a colore (Roman Key Card Blackwood)}
 
-\paragraph{Con atout.} Ai fini delle richieste d'Assi e di Re, il K di atout \`e considerato un Asso. In questo caso quindi ci sono 5 Assi e 3 Re. Seguono le risposte alla richiesta d'Assi (4 \sa).
+Ai fini delle richieste d'Assi e di Re, il K di atout \`e considerato un Asso. In questo caso quindi ci sono 5 Assi e 3 Re. Seguono le risposte alla richiesta d'Assi (4 \sa).
 \begin{twocol}
 5 \c & 0 o 3 Assi.\\
 5 \d & 1 o 4 Assi.\\
@@ -567,29 +596,46 @@ Allora il richiedente domanda 6 \c, e il rispondente licita 6 \d se non possiede
 6 \h & 2 Re.\\
 6 \s & 3 Re. \\
 \end{twocol}
+% 
+% \paragraph{Senza atout.} Seguono le risposte alla richiesta d'Assi (4 \sa).
+% 
+% \begin{twocol}
+% 5 \c & 0 o 3 Assi.\\
+% 5 \d & 1 o 4 Assi.\\
+% 5 \h & 2 Assi.\\
+% \end{twocol}
+% 
+% \noindent Il richiedente può successivamente licitare 5 \s per costringere il rispondente a licitare 5 \sa (a giocare).
+% 
+% \smallspace
+% 
+% \noindent In alternativa si può effettuare la richiesta di Re, dichiarando 5 \sa. Seguono le risposte.
+% 
+% \begin{twocol}
+% 6 \c & Nessun Re.\\
+% 6 \d & 1 Re.\\
+% 6 \h & 2 Re.\\
+% 6 \s & 3 Re. \\
+% 6 \sa & 4 Re.
+% \end{twocol}
 
-\paragraph{Senza atout.} Seguono le risposte alla richiesta d'Assi (4 \sa).
+\subsection{Richieste d'Assi e di Re a \sa (Gerber)}
 
+La richiesta d'Assi si effettua licitando 4 \c, dopo che è stato concordato di giocare a \sa. Seguono le risposte.
 \begin{twocol}
-5 \c & 0 o 3 Assi.\\
-5 \d & 1 o 4 Assi.\\
-5 \h & 2 Assi.\\
+  4 \d & 0 o 4 Assi.\\
+  4 \h & 1 Asso.\\
+  4 \s & 2 Assi.\\
+  4 \sa & 3 Assi.
 \end{twocol}
 
-\noindent Il richiedente può successivamente licitare 5 \s per costringere il rispondente a licitare 5 \sa (a giocare).
-
-\smallspace
-
-\noindent In alternativa si può effettuare la richiesta di Re, dichiarando 5 \sa. Seguono le risposte.
-
+\noindent Dopo la richiesta d'Assi, si può effettuare la richiesta di Re licitando 5 \c. Seguono le risposte.
 \begin{twocol}
-6 \c & Nessun Re.\\
-6 \d & 1 Re.\\
-6 \h & 2 Re.\\
-6 \s & 3 Re. \\
-6 \sa & 4 Re.
+  5 \d & 0 o 4 Re.\\
+  5 \h & 1 Re.\\
+  5 \s & 2 Re.\\
+  5 \sa & 3 Re.
 \end{twocol}
-
 
 
 

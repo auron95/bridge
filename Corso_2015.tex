@@ -1,0 +1,149 @@
+\documentclass[a4paper,10pt]{article}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xspace}
+\usepackage{color}
+% \usepackage[parfill]{parskip}
+\usepackage{hyperref}
+
+
+\topmargin -1cm
+\oddsidemargin -0.5cm
+\textwidth 17cm
+
+
+\renewcommand{\c}{$\clubsuit$\xspace}
+\renewcommand{\d}{$\diamondsuit$\xspace}
+\newcommand{\h}{$\heartsuit$\xspace}
+\newcommand{\s}{$\spadesuit$\xspace}
+\renewcommand{\j}{$\bigstar$\xspace}
+\newcommand{\sa}{SA\xspace}
+
+
+\newcommand{\smallspace}{\vskip0.3cm}
+
+\renewcommand{\tabcolsep}{0.3cm}
+
+\newcommand{\note}[1]{\textcolor{red}{#1}}
+
+
+\newenvironment{twocol}
+  {\smallspace\noindent\begin{tabular}{l p{0.78\textwidth}}}
+  {\end{tabular}\smallspace}
+
+\newenvironment{twocolind}
+  {\smallspace\noindent\begin{tabular}{l p{0.68\textwidth}}}
+  {\end{tabular}\smallspace}
+
+\newenvironment{threecol}
+  {\smallspace\noindent\begin{tabular}{l l p{0.78\textwidth}}}
+  {\end{tabular}\smallspace}
+
+  
+% Title Page
+\title{Convenzioni per il corso di bridge}
+\author{Ugo Bindini \& Giovanni Paolini}
+\date{Autunno 2015}
+
+\begin{document}
+\maketitle
+
+\section{Aperture}
+
+\paragraph{Algoritmo generale.}
+Si licita il colore più lungo, escludendo \s e \h se non sono almeno quinte e le \d se non sono almeno quarte.
+In caso di parità di lunghezza dei semi più lunghi, si dichiara il più alto se sono almeno quinti e si dichiara il più basso se sono quarti.
+Nota: con 4\s\ - 4\h\ - 3\d\ - 2\c, si apre di 1 \c.
+
+\paragraph{Mani bilanciate.} Distribuzioni: 4-3-3-3, 4-4-3-2, 5-3-3-2 con quinta minore.
+
+\begin{threecol}
+ 12-14 HCP & 1 a colore & Si licita seguendo l'algoritmo generale.\\
+ 15-17 HCP & 1 \sa\\
+ 18-19 HCP & 1 \c & Poi \sa a salto sulla risposta a livello di 1 (es: 1 \c\ - 1 \s\ - \mbox{2 \sa}; 1 \c\ - 1 \sa\ - 3 \sa).\\
+ 20-22 HCP & 2 \sa\\
+ 23+ HCP & 2 a colore & Si licita seguendo l'algoritmo generale.
+\end{threecol}
+
+\paragraph{Mani non bilanciate.} Si apre a livello di 1 con 12-20 HCP, a livello di 2 con 21+ HCP, licitando secondo l'algoritmo generale.
+
+\paragraph{Sottoaperture.} Si può aprire a livello di 3 con colore almeno settimo con 6-10 HCP, meglio se a compagno passato.
+
+
+\section{Risposte sull'apertura di 1 a colore}
+
+Si risponde con 5+ HCP oppure con un Asso.
+
+\paragraph{Senza fit.} Se possibile, dire un colore almeno quarto a livello di 1 (il più economico). Per salire a livello di 2 in un colore mai licitato bisogna avere almeno 11 HCP.
+
+\paragraph{Con fit su un colore licitato dal compagno.} Ripetere il colore a livello dà mano minima, a salto invita a manche. Licitare la manche è passabile, con ragionevole certezza di manche anche se il compagno ha mano minima. 4 \sa (richiesta d'Assi) mostra interesse di slam.
+
+
+\section{Risposte sull'apertura di 1 SA}
+
+Se si licita un colore (eccetto \c, vedi oltre) è naturale (almeno quinto), alla ricerca di un fit. 2 \sa è invitante manche, 3 \sa da passare, 4 \sa richiesta d'Assi.
+
+\paragraph{Richiesta di quarte nobili (Stayman).} Con 8+ HCP il rispondente può licitare 2 \c, cercando fit in un seme nobile. L'apertore licita come segue.
+
+\begin{twocol}
+ 2 \d & Nessuna quarta nobile.\\
+ 2 \h & \h quarte, ma non \s quarte.\\
+ 2 \s & \s quarte, ma non \h quarte.\\
+ 2 SA & Entrambe le quarte nobili.
+\end{twocol}
+
+
+\section{Rever}
+
+Dopo l'apertura di 1 \j (12-20 HCP) e una risposta a livello di 1, con la propria seconda dichiarazione l'apertore deve comunicare al compagno se ha 12-15 HCP o 16-20 HCP (rever). Per dare rever occorre superare strettamente 2 \j (colore di apertura). Fa eccezione il caso in cui l'apertore voglia dare fit al rispondente: in questo caso licitare il colore del rispondente a livello dà 12-15 HCP, a salto dà rever. Ecco alcuni esempi:
+
+\begin{twocol}
+1 \d\ - 1 \s\ - 2 \h & 16-20 HCP, con almeno 6 \d e 5 \h (perché?), e ovviamente non 4 \s. Con la stessa distribuzione ma 12-15 HCP, l'apertore licita invece 2 \d, tenendosi le \h per sé.\\
+1 \s\ - 1 \sa\ - 2 \h & 12-15 HCP, con almeno 5 \s e 4 \h.\\
+1 \d\ - 1 \h\ - 3 \h & 16-20 HCP, con almeno 4 \d e 4 \h (si giocherà a \h).\\
+1 \h\ - 1 \s\ - 2 \s & 12-15 HCP, con almeno 5 \h e 4 \s (si giocherà a \s).
+\end{twocol}
+
+
+\section{Richieste d'Assi e di Re}
+
+\paragraph{Richiesta d'Assi (4 \sa).} Risposte:
+
+\begin{twocol}
+5 \c & 0 o 4 Assi.\\
+5 \d & 1 Assi.\\
+5 \h & 2 Assi.\\
+5 \s & 3 Assi.
+\end{twocol}
+
+\paragraph{Richiesta di Re (5 \sa).} Risposte:
+
+\begin{twocol}
+6 \c & 0 o 4 Re.\\
+6 \d & 1 Re.\\
+6 \h & 2 Re.\\
+6 \s & 3 Re.
+\end{twocol}
+
+Dopo aver ricevuto le risposte, il richiedente sceglierà il contratto da giocare. 
+
+
+\section{Interventi}
+
+\begin{twocol}
+  X & 12+ HCP, un po' di carte nei pali non dichiarati dagli avversari (soprattutto nei pali nobili). In alternativa, mano forte (16+ HCP) e distribuzione qualsiasi.\\
+  1 \j & 10+ HCP, \j almeno quinto.\\
+  1 \sa & Come apertura, con fermo nel palo degli avversari.\\
+  2 \j a livello & 12+ HCP, \j almeno quinto.\\
+  3 \j & Come apertura.
+\end{twocol}
+
+\end{document}

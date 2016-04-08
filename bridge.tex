@@ -19,6 +19,9 @@
 \oddsidemargin -0.5cm
 \textwidth 17cm
 
+% Indentazioni e spaziature
+\setlength{\parindent}{0 pt} % Default 15 pt.
+\setlength{\parskip}{0.15 cm} % Default 0 cm?
 
 \renewcommand{\c}{$\clubsuit$\xspace}
 \renewcommand{\d}{$\diamondsuit$\xspace}
@@ -218,12 +221,12 @@ Nel caso in cui la dichiarazione che si sta effettuando sia naturale, valgono i 
 \end{itemize}
 
 \paragraph{Dopo il terzo colore licitato a livello di 1.} Per esempio: 1 \c\ - 1 \d\ - 1 \s.
-L'apertore non ha rever, quindi ha 12-16 HCP.
+L'apertore non ha rever, quindi ha 12-15 HCP.
 Se il rispondente vuole dare il fit nel secondo colore \j licitato dall'apertore (che è nobile!), dichiara:
 \begin{twocol}
- Pass & $\leq$ 7 HCP.\\
- 2 \j  & 8-9 HCP.\\
- 3 \j & 10-11 HCP.\\
+ Pass & $\leq$ Circa 8 HCP.\\
+ 2 \j  & Circa 9-10 HCP.\\
+ 3 \j & Circa 11 HCP.\\
  Cue-bid  & Forzante manche.\\
 \end{twocol}
 
@@ -231,12 +234,13 @@ Se il rispondente vuole dare il fit nel secondo colore \j licitato dall'apertore
 
 \subsection{Con fit su un colore maggiore \j}
 \begin{twocol}
- 2 \j  & 5-7 HCP, fit terzo.\\
- 3 \c & 8-9 HCP.\\
- 3 \j  & 5-7 HCP, fit quarto (oppure fit quinto in seconda).\\
- 4 \j  & 5-7 HCP, fit almeno quinto.\\
+ 2 \j  & 5-9 HCP, fit terzo.\\
+ 3 \c  & 6-7 HCP, fit almeno quarto.\\
+ 3 \d  & 8-9 HCP, fit almeno quarto.\\
+ 3 \j  & 0-5 HCP, fit almeno quarto (non è obbligatorio, specialmente se uno o entrambi gli avversari hanno passato).\\
+%  4 \j  & 5-7 HCP, fit almeno quinto.\\
  2 \sa & 10+ HCP, fit almeno terzo (Jordan).\\
- Cue-bid & Fit almeno terzo, forzante manche, lasciato alla fantasia del rispondente. In questo caso le Cue-bid partono da 3 \d.
+ Cue-bid & Fit almeno terzo, forzante manche, lasciato alla fantasia del rispondente. In questo caso le Cue-bid partono da 3 nell'altro nobile.
 \end{twocol}
 % \note{Splinter?}
 
@@ -559,7 +563,14 @@ Ovviamente talvolta ha senso interrompere le Cue-bid per effettuare una richiest
 
 \subsection{Richieste d'Assi e di Re a colore (Roman Key Card Blackwood)}
 
-Ai fini delle richieste d'Assi e di Re, il K di atout \`e considerato un Asso. In questo caso quindi ci sono 5 Assi e 3 Re. Seguono le risposte alla richiesta d'Assi (4 \sa).
+Ai fini delle richieste d'Assi e di Re, il K di atout \`e considerato un Asso. In questo caso quindi ci sono 5 Assi e 3 Re. Seguono le risposte alla richiesta d'Assi (4 \sa) nel caso in cui l'atout sia un colore nobile.
+\begin{twocol}
+5 \c & 1 o 4 Assi.\\
+5 \d & 0 o 3 Assi.\\
+5 \h & 2 o 5 Assi, senza Q di atout.\\
+5 \s & 2 o 5 Assi, con Q di atout.\\
+\end{twocol}
+\noindent Seguono le risposte nel caso in cui l'atout sia un colore minore.
 \begin{twocol}
 5 \c & 0 o 3 Assi.\\
 5 \d & 1 o 4 Assi.\\
@@ -629,6 +640,12 @@ La richiesta d'Assi si effettua licitando 4 \c, dopo che è stato concordato di 
   5 \s & 2 Re.\\
   5 \sa & 3 Re.
 \end{twocol}
+
+
+\subsection{5 \sa ``Pick A Small Slam''}
+
+In una situazione in cui non vuole già dire qualcos'altro (richiesta di Re, a giocare dopo 5 \c, Cue-bid, ...), la licita di 5 \sa invita a dichiarare in modo naturale proponendo un piccolo slam. Nega il grande slam. Si prosegue la licita in modo naturale.
+
 
 
 \pagebreak

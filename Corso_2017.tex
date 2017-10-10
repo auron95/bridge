@@ -1,0 +1,232 @@
+\documentclass[a4paper,10pt]{article}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xspace}
+\usepackage{color}
+% \usepackage[parfill]{parskip}
+\usepackage{hyperref}
+
+
+\topmargin -1cm
+\oddsidemargin -0.5cm
+\textwidth 17cm
+
+
+\renewcommand{\c}{$\clubsuit$\xspace}
+\renewcommand{\d}{$\diamondsuit$\xspace}
+\newcommand{\h}{$\heartsuit$\xspace}
+\newcommand{\s}{$\spadesuit$\xspace}
+\renewcommand{\j}{$\bigstar$\xspace}
+\newcommand{\sa}{SA\xspace}
+
+
+\newcommand{\smallspace}{\vskip0.3cm}
+
+\renewcommand{\tabcolsep}{0.3cm}
+
+\newcommand{\note}[1]{\textcolor{red}{#1}}
+
+
+\newenvironment{twocol}
+  {\smallspace\noindent\begin{tabular}{l p{0.78\textwidth}}}
+  {\end{tabular}\smallspace}
+
+\newenvironment{twocolind}
+  {\smallspace\noindent\begin{tabular}{l p{0.68\textwidth}}}
+  {\end{tabular}\smallspace}
+
+\newenvironment{threecol}
+  {\smallspace\noindent\begin{tabular}{l l p{0.78\textwidth}}}
+  {\end{tabular}\smallspace}
+
+  
+% Title Page
+\title{Convenzioni per il corso di bridge}
+\author{Ugo Bindini \& Alice Cortinovis}
+\date{Autunno 2017}
+
+\begin{document}
+\maketitle
+
+\section{Aperture}
+
+\paragraph{Algoritmo generale.}
+Si licita il colore più lungo, escludendo \s e \h se non sono almeno quinte e le \d se non sono almeno quarte.
+In caso di parità di lunghezza dei semi più lunghi, si dichiara il più alto se sono almeno quinti e si dichiara il più basso se sono quarti.
+Nota: con 4\s\ - 4\h\ - 3\d\ - 2\c, si apre di 1 \c.
+
+\paragraph{Mani bilanciate.} Distribuzioni: 4-3-3-3, 4-4-3-2, 5-3-3-2 con quinta minore.
+
+\begin{threecol}
+ 12-14 HCP & 1 a colore & Si licita seguendo l'algoritmo generale.\\
+ 15-17 HCP & 1 \sa\\
+ 18-19 HCP & 1 \c & Poi \sa a salto (ad esempio: 1 \c\ - 1 \s\ - 2 \sa, 1 \c\ - 1 \sa\ - 3 \sa).\\
+ 20-22 HCP & 2 \sa\\
+ 23+ HCP & 2 a colore & Si licita seguendo l'algoritmo generale.
+\end{threecol}
+
+\paragraph{Mani non bilanciate.} Si apre a livello di 1 con 12-20 HCP, a livello di 2 con 21+ HCP, licitando secondo l'algoritmo generale.
+
+\paragraph{Sottoaperture.} Si può aprire a livello di 3 con colore almeno settimo e 6-10 HCP, meglio se a compagno passato (barrage).
+
+
+\section{Risposte sull'apertura di 1 a colore}
+
+Si risponde con 5+ HCP oppure con un Asso.
+
+\paragraph{Senza fit.} Se possibile, dire un colore almeno quarto a livello di 1 (il più economico). Per salire a livello di 2 bisogna avere almeno 12 HCP (a meno che non sia per dare il fit).
+
+\paragraph{Con fit su un colore \j licitato dal compagno.} Se il colore è \c o \d, ha comunque la priorità licitare un proprio seme almeno quarto a livello di 1 (c'è tempo per dare il fit successivamente). Per dare fit direttamente
+\begin{twocol}
+ 2 \j & Mano minima (5-8 HCP).\\
+ 3 \j & Invitante a manche (9-11 HCP).\\
+ 4 \j & Garantisce la manche (12-15 HCP).\\
+ 4 \sa & Interesse di slam (16+ HCP).
+\end{twocol}
+
+\section{Risposte sull'apertura di 1 \sa}
+
+\paragraph{Per giocare a \sa.} Il rispondente può licitare
+
+\begin{twocol}
+ PASS & \\
+ 2 \sa & Invitante (8-9 HCP).\\
+ 3 \sa & A giocare (10-14 HCP).\\
+ 4 \sa & Richiesta d'Assi (15+ HCP), interesse di slam.
+\end{twocol}
+
+
+\paragraph{Transfer.} Il rispondente può licitare
+
+\begin{twocol}
+ 2 \d & Obbliga l'apertore a licitare 2 \h.\\
+ 2 \h & Obbliga l'apertore a licitare 2 \s.\\
+ 2 \s & Obbliga l'apertore a licitare 3 \c.\\
+ 3 \c & Obbliga l'apertore a licitare 3 \d.\\
+\end{twocol}
+
+In questo modo si seleziona l'atout; il rispondente poi guida scegliendo il livello del contratto (pass, invito a manche, manche, richiesta d'assi).
+
+\paragraph{Richiesta di quarte nobili (Stayman).} Con 8+ HCP il rispondente può licitare 2 \c, cercando fit in un seme nobile. L'apertore licita come segue.
+
+\begin{twocol}
+ 2 \d & Nessuna quarta nobile.\\
+ 2 \h & \h quarte, ma non \s quarte.\\
+ 2 \s & \s quarte, ma non \h quarte.\\
+ 2 SA & Entrambe le quarte nobili.
+\end{twocol}
+
+Il rispondente ora conosce talmente bene la mano dell'apertore da poter selezionare il contratto migliore.
+
+\section{Risposte sull'apertura di 2 \sa}
+
+\paragraph{Per giocare a \sa.} Il rispondente può licitare
+
+\begin{twocol}
+ PASS & \\
+ 3 \sa & A giocare (5-9 HCP).\\
+ 4 \sa & Richiesta d'Assi (10+ HCP), interesse di slam.
+\end{twocol}
+
+\paragraph{Transfer.} Il rispondente può licitare
+
+\begin{twocol}
+ 3 \d & Obbliga l'apertore a licitare 3 \h.\\
+ 3 \h & Obbliga l'apertore a licitare 3 \s.\\
+ 3 \s & Obbliga l'apertore a licitare 4 \c.\\
+ 4 \c & Obbliga l'apertore a licitare 4 \d.\\
+\end{twocol}
+
+In questo modo si seleziona l'atout; il rispondente poi guida scegliendo il livello del contratto. Le ultime due possibilità vanno usate con cautela, poiché il livello sale molto e, soprattutto, vi prendete la responsabilità di saltare 3 \sa!
+
+\paragraph{Richiesta di quarte nobili (Stayman).} Con 4/5+ HCP (manche garantita, almeno a \sa) il rispondente può licitare 3 \c, cercando fit in un seme nobile. L'apertore licita come segue.
+
+\begin{twocol}
+ 3 \d & Nessuna quarta nobile.\\
+ 3 \h & \h quarte, ma non \s quarte.\\
+ 3 \s & \s quarte, ma non \h quarte.\\
+ 3 SA & Entrambe le quarte nobili.
+\end{twocol}
+
+Il rispondente ora conosce talmente bene la mano dell'apertore da poter selezionare il contratto migliore.
+
+\section{Rever}
+
+Dopo l'apertura di 1 \j (12-20 HCP) e una risposta a livello di 1, con la propria seconda dichiarazione l'apertore deve comunicare al compagno se ha 12-15 HCP o 16-20 HCP (rever). Per dare rever occorre superare strettamente 2 \j (colore di apertura). Fa eccezione il caso in cui l'apertore voglia dare fit al rispondente: in questo caso licitare il colore del rispondente a livello dà 12-15 HCP, a salto dà rever. Ecco alcuni esempi:
+
+\begin{twocol}
+1 \s\ - 1 \sa\ - 2 \h & 12-15 HCP, con almeno 5 \s e 4 \h.\\
+1 \d\ - 1 \h\ - 3 \h & 16-20 HCP, con almeno 4 \d e 4 \h (si giocherà a \h).\\
+1 \h\ - 1 \s\ - 2 \s & 12-15 HCP, con almeno 5 \h e 4 \s (si giocherà a \s).\\
+1 \d\ - 1 \s\ - 2 \h & 16-20 HCP, con almeno 5 \d e 4 \h, e ovviamente non 4 \s. Con la stessa distribuzione ma 12-15 HCP, l'apertore licita invece 2 \d, tenendosi le \h per sé.
+\end{twocol}
+
+
+\section{Richieste d'Assi e di Re}
+
+\paragraph{Richiesta d'Assi (4 \sa).} Risposte:
+
+\begin{twocol}
+5 \c & 0 o 4 Assi.\\
+5 \d & 1 Assi.\\
+5 \h & 2 Assi.\\
+5 \s & 3 Assi.
+\end{twocol}
+
+\paragraph{Richiesta di Re (5 \sa).} Risposte:
+
+\begin{twocol}
+6 \c & 0 o 4 Re.\\
+6 \d & 1 Re.\\
+6 \h & 2 Re.\\
+6 \s & 3 Re.
+\end{twocol}
+
+Dopo aver ricevuto le risposte, il richiedente sceglierà il contratto da giocare.
+
+\section{Interventi}
+
+\begin{twocol}
+  X (contre) & 12+ HCP, al massimo due carte nei semi licitati dagli avversari, almeno 4 carte in un seme nobile. In alternativa, mano forte (rever) con qualsiasi distribuzione.\\
+  1 \j & 10+ HCP, \j almeno quinto.\\
+  1 \sa & Come apertura (15-17 HCP, mano bilanciata), con fermo nel seme degli avversari.\\
+  2 \j a livello & 12+ HCP, \j almeno quinto.\\
+  2 \sa & Come apertura (20-22 HCP, mano bilanciata), con fermo nel seme degli avversari.\\
+  2 \j a salto & 6-10 HCP, \j almeno sesto (mano sbilanciata).\\
+  3 \j & 6-10 HCP, \j almeno settimo (mano sbilanciata).
+\end{twocol}
+
+\pagebreak
+
+\section{Principi generali e consigli}
+
+\indent
+
+Non codifichiamo un modo per dare rever dopo una risposta a livello di 2. D'altronde, poiché entrambi già sanno che si hanno almeno 24 HCP in linea, non ci si ferma prima di una manche, e non ci sono problemi a salire con il livello per continuare la descrizione della mano.
+
+\smallspace
+
+La licita di un nuovo colore da parte del rispondente è sempre forzante almeno un giro (i.e. l'apertore non può passare).
+
+\smallspace
+
+Ripetere un proprio colore in cui non si è ancora trovato un fit allunga il colore di una carta. Eccezione: dopo l'apertura di 1 \c e una risposta a livello di 1, licitare nuovamente le \c promette almeno 5 carte di \c.
+
+\smallspace
+
+Non abbiate paura ad usare il Contre! Molto più spesso di quanto pensiate è la cosa giusta da fare. Contre su una licita a livello di 1 o di 2 è forzante, a meno di casi molto eccezionali (es: 1 \c\ - X - Pass e il quarto giocatore ha 7/8 carte di fiori, o simili).
+
+\smallspace
+
+Giocando ad atout è meglio avere il fit, ma non è indispensabile: talvolta può essere meglio giocare un contratto a livello di 2 con 7 carte in linea, piuttosto che intestardirsi nella ricerca di un fit e salire troppo con la dichiarazione.
+
+
+\end{document}

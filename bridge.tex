@@ -13,10 +13,15 @@
 \usepackage{hyperref}
 \usepackage{xspace}
 \usepackage[parfill]{parskip}
+\usepackage[lmargin=4.5cm, marginparwidth=3.5cm, marginparsep=0.5cm]{geometry}
+\usepackage{marginnote}
+\usepackage{array}
 
 \topmargin -1cm
-\oddsidemargin -0.5cm
-\textwidth 17cm
+% \oddsidemargin -0.5cm
+\textwidth 14.5cm
+
+\reversemarginpar
 
 \setlength{\parindent}{0 pt} % Default 15 pt.
 \setlength{\parskip}{0.15 cm} % Default 0 cm?
@@ -50,10 +55,24 @@
   {\smallspace\noindent\begin{tabular}{l l p{0.78\textwidth}}}
   {\end{tabular}\smallspace}
 
+
+\newcommand{\biddingtable}[1]{
+  \marginnote{
+    \scriptsize{
+    \def\arraystretch{1.5}
+    \renewcommand{\tabcolsep}{0.1cm}
+    \begin{tabular}{|>{\centering\arraybackslash}p{0.6cm}>{\centering\arraybackslash}p{0.6cm}>{\centering\arraybackslash}p{0.6cm}>{\centering\arraybackslash}p{0.6cm}|}
+      \hline
+      #1
+    \end{tabular}
+    }
+  }[0.5cm]
+}
+
   
 % Title Page
 \title{Convenzioni di bridge}
-\author{Ugo Bindini, Cristoforo Caffi, Alice Cortinovis, Giovanni Paolini, Francesco Veneziano}
+\author{Ugo Bindini \and Cristoforo Caffi \and Alice Cortinovis \and Giovanni Paolini \and Francesco Veneziano}
 
 \begin{document}
 \maketitle
@@ -194,6 +213,8 @@ Si risponde con 5+ HCP oppure con un Asso.
 % \end{itemize}
 
 \subsection{Con fit su un colore maggiore \j}
+
+\biddingtable{1 \M & P & * & }
 
 % Per valutare la forza della mano si calcolano i punti totali (HD), dati dalla somma degli HCP e i punti distribuzione, così intesi.
 % \begin{itemize}

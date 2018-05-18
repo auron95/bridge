@@ -27,6 +27,8 @@
 \newcommand{\s}{$\spadesuit$\xspace}
 \renewcommand{\j}{$\bigstar$\xspace}
 \newcommand{\sa}{SA\xspace}
+\renewcommand{\M}{\mathbb{M}}
+\renewcommand{\m}{\mathbb{m}}
 
 
 \newcommand{\smallspace}{\vskip0.3cm}
@@ -51,7 +53,7 @@
   
 % Title Page
 \title{Convenzioni di bridge}
-\author{Ugo Bindini, Cristoforo Caffi, Alice Cortinovis, Giovanni Paolini}
+\author{Ugo Bindini, Cristoforo Caffi, Alice Cortinovis, Giovanni Paolini, Francesco Veneziano}
 
 \begin{document}
 \maketitle
@@ -202,14 +204,17 @@ Si risponde con 5+ HCP oppure con un Asso.
 % \end{itemize}
 
 \begin{twocol}
+	2 \c & Fit almeno terzo, 10-11 HCP, rispondente passato di mano (Drury).\\ 
 	2 \j  & Fit terzo, mano non invitante.\\ 
-	2 \sa & Fit almeno terzo (Jacoby), mano almeno invitante.\\
+	2 \sa & Fit almeno terzo (Jensen), mano almeno invitante.\\
 	3 \j  & Fit almeno quarto (barrage). \\
+	3 \sa & Splinter nell'altro nobile.\\
+	4 \c/\d & Splinter a \c/\d.\\
 	4 \j  & Fit almeno quinto (barrage).\\
 	Cue-bid & Fit almeno terzo, forzante manche. Le Cue-bid partono da 3 \h/\s.
 \end{twocol}
 
-\paragraph{Sviluppo su 2 \sa.} Su 1 \s\ - 2 \sa, l'apertore licita
+\paragraph{Sviluppo dopo 1 \h/\s\ - 2 \sa (Jensen).} Dopo 1 \s\ - P - 2 \sa, l'apertore licita
 \begin{twocol}
 	3 \c & 12-15 HCP.\\
 	3 \d & 16+ HCP, singolo o vuoto a \d, senza quinte laterali.\\
@@ -238,82 +243,73 @@ Dopo 1 \s\ - 2 \sa\ - 3 \c\ - 3 \d, l'apertore licita come segue.
 
 Su 1 \h\ - 2 \sa, le sequenze sono analoghe (è esclusa la risposta di 4 \s al terzo giro). 
 
-\subsection{Con fit sulle \d}
-
-Nota: dopo l'apertura di 1 \d, l'eventuale fit quarto del rispondente viene momentaneamente taciuto.
-
+\paragraph{Sviluppi dopo 1 \h/\s\ - 2 \c (Drury).}
 \begin{twocol}
-  1 \h/\s & Se possibile, come nel caso senza fit. \\
-  2 \c & 12+ HCP, come nel caso senza fit. \\
-  2 \sa & 10-11 HCP, come nel caso senza fit. \\
-  3 \d & 5-9 HCP (l'apertore può passare, proseguire con una cue-bid a \c, chiudere a 3 \sa).
+  2 \d & Artificiale: normale forza di apertura, anche minima; forzante fino a 2M.\\
+  2 \h/\s & 
+  3 \sa & Senza singoli né vuoti, disponibile a giocare \sa.\\
+  Altro & Singolo o vuoto (il più economico).
 \end{twocol}
 
-\subsection{Senza fit}
+
+
+\subsection{Dopo l'apertura 1 \c}
 
 Se possibile, dire un colore almeno quarto a livello di 1 -- il più lungo, e in caso di parità il più economico. Attenzione al caso di una mano bicolore \s/\h (vedi oltre). Altrimenti, si licita come segue.
 
-Su 1 \c:
 \begin{twocol}
-  1 \d & \d almeno quarte.\\
-  1 \h & \h almeno quarte.\\
-  1 \s & \s almeno quarte.\\
+  1 \d/\h/\s & \d/\h/\s almeno quarte.\\
   1 \sa & 5-9 HCP, senza quarte licitabili a livello di 1 (quindi \c almeno quarte). \\
   2 \c & Forzante manche, senza quarte licitabili a livello di 1 (quindi \c almeno quarte). \\
-  2 \d & Mano debole o debolissima (0-4 HCP), un seme nobile almeno sesto. L'apertore può licitare 2 \h (passa o correggi). \\
+  2 \d & 0-4 HCP e un seme nobile almeno sesto. L'apertore può licitare 2 \h (passa o correggi). \\
   2 \h & 5-8 HCP, 5+ \s e 4+ \h. \\
   2 \s & 9-11 HCP, 5+ \s e 4+ \h. \\
   2 \sa & 10-11 HCP, \c quarte o quinte (senza singoli né vuoti).\\
   3 \c & 10-11 HCP, \c almeno seste.
 \end{twocol}
 
-Su 1 \d:
+\subsection{Dopo l'apertura 1 \d}
+
+Se possibile, dire un colore almeno quarto a livello di 1 -- il più lungo, e in caso di parità il più economico. Attenzione al caso di una mano bicolore \s/\h (vedi oltre). Altrimenti, si licita come segue.
+
 \begin{twocol}
   1 \h & \h almeno quarte.\\
   1 \s & \s almeno quarte.\\
   1 \sa & 5-9 HCP, senza quarte licitabili a livello di 1. \\
   2 \c & Forzante manche, senza quarte licitabili a livello di 1. \\
-  2 \d & Mano debole o debolissima (0-4 HCP), un seme nobile almeno sesto. L'apertore può licitare 2 \h (passa o correggi). \\
+  2 \d & 0-4 HCP e un seme nobile almeno sesto. L'apertore può licitare 2 \h (passa o correggi). \\
   2 \h & 5-8 HCP, bicolore \s / \h (almeno 5-4). \\
   2 \s & 9-11 HCP, bicolore \s / \h (almeno 5-4). \\
   2 \sa & 10-11 HCP, invitante a 3 \sa, senza singoli né vuoti.\\
   3 \d & 10-11 HCP, \d almeno quinte.
 \end{twocol}
 
-Su 1 \h:
+\subsection{Dopo l'apertura 1 \h (senza fit)}
+
+Se possibile, dare la quarta di \s.
+Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono solo invitanti; in questo caso la risposta di 2\c è artificiale (Drury) e dà il fit. 
 \begin{twocol}
-  1 \sa & $\leq 11$ HCP. \\
+  1 \s & \s almeno quarte.\\
+  1 \sa & 5-11 HCP. \\
   2 \c & Forzante manche. \\
-  2 \d & Forzante manche, \d almeno quarte.
+  2 \d & Forzante manche, \d almeno quinte.\\
+  2 \s & 0-5 HCP, \s almeno seste.\\
+  3 \c/\d & 9-11 HCP, \c/\d belle almeno seste, invitante a 3 \sa o 5 \c/\d.\\
+  3 \s & 5-7 HCP, \s belle almeno settime.\\
+  4 \s & Barrage.
+  
 \end{twocol}
 
-Su 1 \s:
+\subsection{Dopo l'apertura di 1 \s (senza fit)}
+Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono solo invitanti; in questo caso la risposta di 2\c è artificiale (Drury) e dà il fit. 
 \begin{twocol}
-  1 \sa & $\leq 11$ HCP. \\
+  1 \sa & 5-11 HCP. \\
   2 \c & Forzante manche. \\
-  2 \d & Forzante manche, \d almeno quarte. \\
-  2 \h & Forzante manche, \h almeno quinte.
+  2 \d & Forzante manche, \d almeno quinte.\\
+  2 \h & Forzante manche, \h almeno quinte.\\
+  3 \c/\d/\h & 9-11 HCP, \c/\d/\h belle almeno seste, invitante a 3 \sa o 4 \h o 5 \c/\d.\\
+  4 \h & Barrage.
 \end{twocol}
-
-\paragraph{Dopo il terzo colore licitato a livello di 1.} Per esempio: 1 \c\ - 1 \d\ - 1 \s. L'apertore non ha rever, quindi ha 12-15 HCP. Se il rispondente vuole dare il fit nel secondo colore \j licitato dall'apertore (che è nobile!), dichiara:
-\begin{twocol}
-  Pass & $\leq$ 8 HCP.\\
-  2 \j  & Invitante manche.\\
-  Cue-bid  & Forzante manche.\\
-\end{twocol}
-
-Licitare il quarto colore è richiesta di fermo (forzante un giro).
-
-\subsection{Con fit sulle \c (almeno seste)}
-
-\begin{twocol}
-  1 \d/\h/\s & Se possibile, come nel caso senza fit. \\
-  2 \c & 12+ HCP, come nel caso senza fit. \\
-  2 \sa & 10-11 HCP, come nel caso senza fit. \\
-  3 \c & 5-9 HCP (l'apertore può passare, proseguire con una cue-bid a \c, chiudere a 3 \sa).
-\end{twocol}
-
-
 
 
 \pagebreak

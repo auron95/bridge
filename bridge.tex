@@ -58,19 +58,21 @@
   {\end{tabular}\smallspace}
 
 
-\newcommand{\biddingtable}[1]{
+\newcommand{\biddingtable}[2][0cm]{
   \marginnote{
     \scriptsize{
     \def\arraystretch{1.5}
     \renewcommand{\tabcolsep}{0.1cm}
     \begin{tabular}{|>{\centering\arraybackslash}p{0.6cm}>{\centering\arraybackslash}p{0.6cm}>{\centering\arraybackslash}p{0.6cm}>{\centering\arraybackslash}p{0.6cm}|}
       \hline
-      #1
+      #2
     \end{tabular}
     }
-  }[0.5cm]
+  }[#1]
 }
 
+\newcommand{\biddingtablesec}[1]{\biddingtable[-0.65cm]{#1}}
+% \newcommand{\biddingtablepar}[1]{\biddingtable{#1}{0cm}}
   
 % Title Page
 \title{Convenzioni di bridge}
@@ -146,8 +148,6 @@ Si risponde con 5+ HCP oppure con un Asso.
 
 \subsection{Con fit su un colore maggiore \M}
 
-\biddingtable{1 \M & P & * & }
-
 % Per valutare la forza della mano si calcolano i punti totali (HD), dati dalla somma degli HCP e i punti distribuzione, così intesi.
 % \begin{itemize}
 %  \item Per ogni atout oltre l'ottava: 1 punto;
@@ -157,20 +157,21 @@ Si risponde con 5+ HCP oppure con un Asso.
 % \end{itemize}
 
 \begin{twocol}
-	2 \c & Fit almeno terzo, 10-11 HCP, rispondente passato di mano (\hyperref[drury]{Drury}).\\ 
-	2 \M  & Fit terzo, mano non invitante.\\ 
-	2 \sa & Fit almeno terzo (\hyperref[jensen]{Jensen}), mano almeno invitante.\\
-	3 \M  & Fit almeno quarto (barrage). \\
-	3 \sa & Splinter nell'altro nobile.\\
-	4 \c/\d & Splinter a \c/\d.\\
-	4 \M  & Fit almeno quinto (barrage).\\
-	Cue-bid & Fit almeno terzo, forzante manche. Le Cue-bid partono da 3 \h/\s.
+  \biddingtable{1 \M & P & * & }
+  2 \c & Fit almeno terzo, 10-11 HCP, rispondente passato di mano (\hyperref[drury]{Drury}).\\ 
+  2 \M  & Fit terzo, mano non invitante.\\ 
+  2 \sa & Fit almeno terzo (\hyperref[jensen]{Jensen}), mano almeno invitante.\\
+  3 \M  & Fit almeno quarto (barrage). \\
+  3 \sa & Splinter nell'altro nobile.\\
+  4 \c/\d & Splinter a \c/\d.\\
+  4 \M  & Fit almeno quinto (barrage).\\
+  Cue-bid & Fit almeno terzo, forzante manche. Le Cue-bid partono da 3 \h/\s.
 \end{twocol}
 
 \paragraph{Sviluppi dopo 1 \M\ - 2 \c (Drury).} \label{drury} \hspace{1cm}
-\biddingtable{& & P & P \\ 1 \M & P & 2 \c & P \\ * &&&}
 
 \begin{twocol}
+  \biddingtable{& & P & P \\ 1 \M & P & 2 \c & P \\ * &&&}
   2 \d & 12+ HCP, forzante fino a 2 \M.\\
   2 \M & Apertura leggera, sign-off.\\
   3 \sa & 5-3-3-2 passa o correggi, senza visuale di slam.\\
@@ -178,10 +179,11 @@ Si risponde con 5+ HCP oppure con un Asso.
   Altro & Naturale, forzante manche.
 \end{twocol}
 
-\paragraph{Sviluppi dopo 1 \M\ - 2 \M.} L'apertore passa senza rever. Con rever, può licitare come segue.
-\biddingtable{1 \M & P & 2 \M & P \\ * &&&}
+\paragraph{Sviluppi dopo 1 \M\ - 2 \M.}
+L'apertore passa senza rever. Con rever, può licitare come segue.
 
 \begin{twocol}
+  \biddingtable{1 \M & P & 2 \M & P \\ * &&&}
   2 \sa & Interrogativo.\\
   Nuovo seme a livello & \emph{Trial-bid}, seme debole almeno terzo in cerca di supporto (singolo/vuoto od onori).\\
   3 \M & Invitante generico.\\
@@ -190,9 +192,9 @@ Si risponde con 5+ HCP oppure con un Asso.
 \end{twocol}
 
 Dopo 1 \M\ - 2 \M\ - 2 \sa, il rispondente licita come segue.
-\biddingtable{1 \M & P & 2 \M & P \\ 2 \sa & P & * &}
 
 \begin{twocol}
+ \biddingtable{1 \M & P & 2 \M & P \\ 2 \sa & P & * &}
  3 \M & Mano minima.\\
  Altro & Mano massima non bilanciata, il colore più economico nel quale possiede dei valori (senza superare 3 \M).\\
  3 \sa & Mano massima bilanciata (preferisce 3 \sa a 4 \M).\\
@@ -203,30 +205,30 @@ Dopo una \emph{trial-bid}, il rispondente rivaluta la mano e sceglie fra 3 \M e 
 
 
 \paragraph{Sviluppo dopo 1 \M - 2 \sa (Jensen).} \label{jensen} Dopo 1 \s\ - 2 \sa, l'apertore licita come segue.
-\biddingtable{1 \M & P & 2 \sa & P \\ * & & &}
 \begin{twocol}
-	3 \c & 12-15 HCP.\\
-	3 \d & 16+ HCP, singolo o vuoto a \d, senza quinte laterali.\\
-	3 \h & 16+ HCP, singolo o vuoto a \h, senza quinte laterali.\\
-	3 \s & 16+ HCP singolo o vuoto a \c, senza quinte laterali.\\
-	3 \sa & 18+ HCP, senza quinte laterali né singoli né vuoti.\\
-	4 \c & 16+ HCP, \c almeno quinte.\\
-	4 \d & 16+ HCP, \d almeno quinte.\\
-	4 \h & 16+ HCP, \h almeno quinte.\\
-	4 \s & 16-17 HCP, senza singoli né vuoti.
+  \biddingtable{1 \s & P & 2 \sa & P \\ * &&&}
+  3 \c & 12-15 HCP.\\
+  3 \d & 16+ HCP, singolo o vuoto a \d, senza quinte laterali.\\
+  3 \h & 16+ HCP, singolo o vuoto a \h, senza quinte laterali.\\
+  3 \s & 16+ HCP singolo o vuoto a \c, senza quinte laterali.\\
+  3 \sa & 18+ HCP, senza quinte laterali né singoli né vuoti.\\
+  4 \c & 16+ HCP, \c almeno quinte.\\
+  4 \d & 16+ HCP, \d almeno quinte.\\
+  4 \h & 16+ HCP, \h almeno quinte.\\
+  4 \s & 16-17 HCP, senza singoli né vuoti.
 \end{twocol}
 
 Dopo 1 \s\ - 2 \sa\ - 3 \c, il rispondente licita come segue.
-\biddingtable{1 \M & P & 2 \sa & P \\ 3 \c & P & * &}
 \begin{twocol}
+  \biddingtable{1 \M & P & 2 \sa & P \\ 3 \c & P & * &}
   3 \d & Forzante manche, richiesta di singoli o vuoti.\\
   3 \s & Invitante a 4 \s.\\
   Altro & Cue-bid.
 \end{twocol}
 
-\biddingtable{1 \M & P & 2 \sa & P \\ 3 \c & P & 3 \d & P \\ * & & &}
 Dopo 1 \s\ - 2 \sa\ - 3 \c\ - 3 \d, l'apertore licita come segue.
 \begin{twocol}
+  \biddingtable{1 \M & P & 2 \sa & P \\ 3 \c & P & 3 \d & P \\ * &&&}
   3 \s & Senza singoli né vuoti.\\
   3 \sa & Senza singoli né vuoti, disponibile a giocare \sa.\\
   Altro & Singolo o vuoto (il più economico).
@@ -235,10 +237,11 @@ Dopo 1 \s\ - 2 \sa\ - 3 \c\ - 3 \d, l'apertore licita come segue.
 Se l'apertore aveva aperto di 1 \h, le sequenze sono analoghe (è esclusa la risposta di 4 \s al terzo giro).
 
 \subsection{Dopo l'apertura 1 \c}
-\biddingtable{1 \c & P & * &}
+
 Se possibile, dire un colore almeno quarto a livello di 1 -- il più lungo, e in caso di parità il più economico. Attenzione al caso di una mano bicolore \s/\h (vedi oltre). Altrimenti, si licita come segue.
-s
+
 \begin{twocol}
+  \biddingtable{1 \c & P & * &}
   1 \d/\h/\s & \d/\h/\s almeno quarte.\\
   1 \sa & 5-9 HCP, senza quarte licitabili a livello di 1 (quindi \c almeno quarte). \\
   2 \c & Forzante manche, senza quarte licitabili a livello di 1 (quindi \c almeno quarte). \\
@@ -251,10 +254,11 @@ s
 
 
 \subsection{Dopo l'apertura 1 \d}
-\biddingtable{1 \d & P & * &}
+
 Se possibile, dire un colore almeno quarto a livello di 1 -- il più lungo, e in caso di parità il più economico. Attenzione al caso di una mano bicolore \s/\h (vedi oltre). Altrimenti, si licita come segue.
 
 \begin{twocol}
+  \biddingtable{1 \d & P & * &}
   1 \M & \M almeno quarto.\\
   1 \sa & 5-9 HCP, senza quarte licitabili a livello di 1. \\
   2 \c & Forzante manche, senza quarte licitabili a livello di 1. \\
@@ -267,10 +271,11 @@ Se possibile, dire un colore almeno quarto a livello di 1 -- il più lungo, e in
 
 
 \subsection{Dopo l'apertura 1 \h (senza fit)}
-\biddingtable{1 \h & P & * &}
+
 Se possibile, dare la quarta di \s.
 Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono solo invitanti; in questo caso la risposta di 2\c è artificiale (\hyperref[drury]{Drury}) e dà il fit. 
 \begin{twocol}
+  \biddingtable{1 \h & P & * &}
   1 \s & \s almeno quarte.\\
   1 \sa & 5-11 HCP. \\
   2 \c & Forzante manche. \\
@@ -284,9 +289,10 @@ Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono 
 
 
 \subsection{Dopo l'apertura di 1 \s (senza fit)}
-\biddingtable{1 \s & P & * &}
-Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono solo invitanti; in questo caso la risposta di 2\c è artificiale (Drury) e dà il fit. 
+
+Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono solo invitanti; in questo caso la risposta di 2\c è artificiale (\hyperref[drury]{Drury}) e dà il fit. 
 \begin{twocol}
+  \biddingtable{1 \s & P & * &}
   1 \sa & 5-11 HCP. \\
   2 \c & Forzante manche. \\
   2 \d & Forzante manche, \d almeno quinte.\\
@@ -304,8 +310,9 @@ Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono 
 La seconda dichiarazione dell'apertore descrive la distribuzione della mano secondo principi naturali.
 
 \paragraph{Dopo 1 \c\ - 1 \j} In ordine di priorità:
-\biddingtable{1 \c & P & 1 \j & P \\ * & & &}
+
 \begin{enumerate}[(i)]
+ \biddingtable{1 \c & P & 1 \j & P \\ * &&&}
  \item Dare il fit in un seme nobile;
  \item licitare una quarta nobile;
  \item dare il fit a \d;
@@ -313,8 +320,9 @@ La seconda dichiarazione dell'apertore descrive la distribuzione della mano seco
 \end{enumerate}
 
 \paragraph{Dopo 1 \d\ - 1 \h} In ordine di priorità:
-\biddingtable{1 \d & P & 1 \h & P \\ * & & &}
+
 \begin{twocol}
+ \biddingtable{1 \d & P & 1 \h & P \\ * &&&}
  2 \h & Fit quarto.\\
  1 \s & \s almeno quarte.\\
  2 \c & \c almeno quarte.\\
@@ -323,8 +331,9 @@ La seconda dichiarazione dell'apertore descrive la distribuzione della mano seco
 \end{twocol}
 
 \paragraph{Dopo 1 \d\ - 1 \s} In ordine di priorità:
-\biddingtable{1 \d & P & 1 \s & P \\ * & & &}
+
 \begin{twocol}
+ \biddingtable{1 \d & P & 1 \s & P \\ * &&&}
  2 \s & Fit quarto.\\
  2 \c & \c almeno quarte.\\
  2 \d & \d almeno quinte.\\
@@ -334,8 +343,9 @@ La seconda dichiarazione dell'apertore descrive la distribuzione della mano seco
 \subsection{Dopo un'apertura nobile}
 
 \paragraph{Dopo 1 \h\ - 1 \s} In ordine di priorità:
-\biddingtable{1 \h & P & 1 \s & P \\ * & & &}
+
 \begin{twocol}
+ \biddingtable{1 \h & P & 1 \s & P \\ * &&&}
  2 \sa & 16+ HCP, \h almeno seste, una quarta laterale qualsiasi (anche \s).\\
  2 \c & 12-15 HCP, \c almeno quarte oppure 16+ HCP (\hyperref[gazzilli]{Gazzilli}).\\
  3 \s & Invitante, fit quarto, mano sbilanciata e buone atout.\\

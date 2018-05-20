@@ -18,6 +18,7 @@
 \usepackage{marginnote}
 \usepackage{array}
 \usepackage{skak}
+\usepackage{needspace}
 
 \topmargin -1cm
 % \oddsidemargin -0.5cm
@@ -58,7 +59,8 @@
   {\end{tabular}\smallspace}
 
 
-\newcommand{\biddingtable}[2][0cm]{
+\newcommand{\biddingtable}[2][0.4cm]{
+  \needspace{1cm}
   \marginnote{
     \scriptsize{
     \def\arraystretch{1.5}
@@ -156,8 +158,8 @@ Si risponde con 5+ HCP oppure con un Asso.
 %  \item per ogni vuoto: 3 punti se si hanno tre atout, 5 punti se si hanno almeno quattro atout   
 % \end{itemize}
 
+\biddingtable{1 \M & P & * & }
 \begin{twocol}
-  \biddingtable{1 \M & P & * & }
   2 \c & Fit almeno terzo, 10-11 HCP, rispondente passato di mano (\hyperref[drury]{Drury}).\\ 
   2 \M  & Fit terzo, mano non invitante.\\ 
   2 \sa & Fit almeno terzo (\hyperref[jensen]{Jensen}), mano almeno invitante.\\
@@ -170,8 +172,8 @@ Si risponde con 5+ HCP oppure con un Asso.
 
 \paragraph{Sviluppi dopo 1 \M\ - 2 \c (Drury).} \label{drury} \hspace{1cm}
 
+\biddingtable{& & P & P \\ 1 \M & P & 2 \c & P \\ * &&&}
 \begin{twocol}
-  \biddingtable{& & P & P \\ 1 \M & P & 2 \c & P \\ * &&&}
   2 \d & 12+ HCP, forzante fino a 2 \M.\\
   2 \M & Apertura leggera, sign-off.\\
   3 \sa & 5-3-3-2 passa o correggi, senza visuale di slam.\\
@@ -182,8 +184,8 @@ Si risponde con 5+ HCP oppure con un Asso.
 \paragraph{Sviluppi dopo 1 \M\ - 2 \M.}
 L'apertore passa senza rever. Con rever, può licitare come segue.
 
+\biddingtable{1 \M & P & 2 \M & P \\ * &&&}
 \begin{twocol}
-  \biddingtable{1 \M & P & 2 \M & P \\ * &&&}
   2 \sa & Interrogativo.\\
   Nuovo seme a livello & \emph{Trial-bid}, seme debole almeno terzo in cerca di supporto (singolo/vuoto od onori).\\
   3 \M & Invitante generico.\\
@@ -193,20 +195,21 @@ L'apertore passa senza rever. Con rever, può licitare come segue.
 
 Dopo 1 \M\ - 2 \M\ - 2 \sa, il rispondente licita come segue.
 
+\biddingtable{1 \M & P & 2 \M & P \\ 2 \sa & P & * &}
 \begin{twocol}
- \biddingtable{1 \M & P & 2 \M & P \\ 2 \sa & P & * &}
- 3 \M & Mano minima.\\
- Altro & Mano massima non bilanciata, il colore più economico nel quale possiede dei valori (senza superare 3 \M).\\
- 3 \sa & Mano massima bilanciata (preferisce 3 \sa a 4 \M).\\
- 4 \M & Mano massima (preferisce 4 \M a 3 \sa).\\
+  3 \M & Mano minima.\\
+  Altro & Mano massima non bilanciata, il colore più economico nel quale possiede dei valori (senza superare 3 \M).\\
+  3 \sa & Mano massima bilanciata (preferisce 3 \sa a 4 \M).\\
+  4 \M & Mano massima (preferisce 4 \M a 3 \sa).\\
 \end{twocol}
 
 Dopo una \emph{trial-bid}, il rispondente rivaluta la mano e sceglie fra 3 \M e 4 \M. 
 
 
 \paragraph{Sviluppo dopo 1 \M - 2 \sa (Jensen).} \label{jensen} Dopo 1 \s\ - 2 \sa, l'apertore licita come segue.
+
+\biddingtable{1 \s & P & 2 \sa & P \\ * &&&}
 \begin{twocol}
-  \biddingtable{1 \s & P & 2 \sa & P \\ * &&&}
   3 \c & 12-15 HCP.\\
   3 \d & 16+ HCP, singolo o vuoto a \d, senza quinte laterali.\\
   3 \h & 16+ HCP, singolo o vuoto a \h, senza quinte laterali.\\
@@ -219,16 +222,18 @@ Dopo una \emph{trial-bid}, il rispondente rivaluta la mano e sceglie fra 3 \M e 
 \end{twocol}
 
 Dopo 1 \s\ - 2 \sa\ - 3 \c, il rispondente licita come segue.
+
+\biddingtable{1 \M & P & 2 \sa & P \\ 3 \c & P & * &}
 \begin{twocol}
-  \biddingtable{1 \M & P & 2 \sa & P \\ 3 \c & P & * &}
   3 \d & Forzante manche, richiesta di singoli o vuoti.\\
   3 \s & Invitante a 4 \s.\\
   Altro & Cue-bid.
 \end{twocol}
 
 Dopo 1 \s\ - 2 \sa\ - 3 \c\ - 3 \d, l'apertore licita come segue.
+
+\biddingtable{1 \M & P & 2 \sa & P \\ 3 \c & P & 3 \d & P  \\ * &&&}
 \begin{twocol}
-  \biddingtable{1 \M & P & 2 \sa & P \\ 3 \c & P & 3 \d & P \\ * &&&}
   3 \s & Senza singoli né vuoti.\\
   3 \sa & Senza singoli né vuoti, disponibile a giocare \sa.\\
   Altro & Singolo o vuoto (il più economico).
@@ -240,8 +245,8 @@ Se l'apertore aveva aperto di 1 \h, le sequenze sono analoghe (è esclusa la ris
 
 Se possibile, dire un colore almeno quarto a livello di 1 -- il più lungo, e in caso di parità il più economico. Attenzione al caso di una mano bicolore \s/\h (vedi oltre). Altrimenti, si licita come segue.
 
+\biddingtable{1 \c & P & * &}
 \begin{twocol}
-  \biddingtable{1 \c & P & * &}
   1 \d/\h/\s & \d/\h/\s almeno quarte.\\
   1 \sa & 5-9 HCP, senza quarte licitabili a livello di 1 (quindi \c almeno quarte). \\
   2 \c & Forzante manche, senza quarte licitabili a livello di 1 (quindi \c almeno quarte). \\
@@ -257,8 +262,8 @@ Se possibile, dire un colore almeno quarto a livello di 1 -- il più lungo, e in
 
 Se possibile, dire un colore almeno quarto a livello di 1 -- il più lungo, e in caso di parità il più economico. Attenzione al caso di una mano bicolore \s/\h (vedi oltre). Altrimenti, si licita come segue.
 
+\biddingtable{1 \d & P & * &}
 \begin{twocol}
-  \biddingtable{1 \d & P & * &}
   1 \M & \M almeno quarto.\\
   1 \sa & 5-9 HCP, senza quarte licitabili a livello di 1. \\
   2 \c & Forzante manche, senza quarte licitabili a livello di 1. \\
@@ -273,9 +278,10 @@ Se possibile, dire un colore almeno quarto a livello di 1 -- il più lungo, e in
 \subsection{Dopo l'apertura 1 \h (senza fit)}
 
 Se possibile, dare la quarta di \s.
-Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono solo invitanti; in questo caso la risposta di 2\c è artificiale (\hyperref[drury]{Drury}) e dà il fit. 
+Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono solo invitanti; in questo caso la risposta di 2\c è artificiale (\hyperref[drury]{Drury}) e dà il fit.
+
+\biddingtable{1 \h & P & * &}
 \begin{twocol}
-  \biddingtable{1 \h & P & * &}
   1 \s & \s almeno quarte.\\
   1 \sa & 5-11 HCP. \\
   2 \c & Forzante manche. \\
@@ -290,9 +296,10 @@ Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono 
 
 \subsection{Dopo l'apertura di 1 \s (senza fit)}
 
-Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono solo invitanti; in questo caso la risposta di 2\c è artificiale (\hyperref[drury]{Drury}) e dà il fit. 
+Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono solo invitanti; in questo caso la risposta di 2\c è artificiale (\hyperref[drury]{Drury}) e dà il fit.
+
+\biddingtable{1 \s & P & * &}
 \begin{twocol}
-  \biddingtable{1 \s & P & * &}
   1 \sa & 5-11 HCP. \\
   2 \c & Forzante manche. \\
   2 \d & Forzante manche, \d almeno quinte.\\
@@ -311,18 +318,18 @@ La seconda dichiarazione dell'apertore descrive la distribuzione della mano seco
 
 \paragraph{Dopo 1 \c\ - 1 \j} In ordine di priorità:
 
+\biddingtable{1 \c & P & 1 \j & P \\ * &&&}
 \begin{enumerate}[(i)]
- \biddingtable{1 \c & P & 1 \j & P \\ * &&&}
- \item Dare il fit in un seme nobile;
- \item licitare una quarta nobile;
- \item dare il fit a \d;
- \item decidere tra 1 \c (\c almeno quinte) o 1 \sa. In caso di mano semi-bilanciata con \j terzo, licitare 1 \sa.
+  \item Dare il fit in un seme nobile;
+  \item licitare una quarta nobile;
+  \item dare il fit a \d;
+  \item decidere tra 1 \c (\c almeno quinte) o 1 \sa. In caso di mano semi-bilanciata con \j terzo, licitare 1 \sa.
 \end{enumerate}
 
 \paragraph{Dopo 1 \d\ - 1 \h} In ordine di priorità:
 
+\biddingtable{1 \d & P & 1 \h & P \\ * &&&}
 \begin{twocol}
- \biddingtable{1 \d & P & 1 \h & P \\ * &&&}
  2 \h & Fit quarto.\\
  1 \s & \s almeno quarte.\\
  2 \c & \c almeno quarte.\\
@@ -332,8 +339,8 @@ La seconda dichiarazione dell'apertore descrive la distribuzione della mano seco
 
 \paragraph{Dopo 1 \d\ - 1 \s} In ordine di priorità:
 
+\biddingtable{1 \d & P & 1 \s & P \\ * &&&}
 \begin{twocol}
- \biddingtable{1 \d & P & 1 \s & P \\ * &&&}
  2 \s & Fit quarto.\\
  2 \c & \c almeno quarte.\\
  2 \d & \d almeno quinte.\\
@@ -344,8 +351,8 @@ La seconda dichiarazione dell'apertore descrive la distribuzione della mano seco
 
 \paragraph{Dopo 1 \h\ - 1 \s} In ordine di priorità:
 
+\biddingtable{1 \h & P & 1 \s & P \\ * &&&}
 \begin{twocol}
- \biddingtable{1 \h & P & 1 \s & P \\ * &&&}
  2 \sa & 16+ HCP, \h almeno seste, una quarta laterale qualsiasi (anche \s).\\
  2 \c & 12-15 HCP, \c almeno quarte oppure 16+ HCP (\hyperref[gazzilli]{Gazzilli}).\\
  3 \s & Invitante, fit quarto, mano sbilanciata e buone atout.\\

@@ -8,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage[mathscr]{urwchancal}
 \usepackage{color}
 \usepackage{enumerate}
 \usepackage{fancyhdr}
@@ -19,6 +20,8 @@
 \usepackage{array}
 \usepackage{skak}
 \usepackage{needspace}
+
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
 
 \topmargin -1cm
 % \oddsidemargin -0.5cm
@@ -35,8 +38,8 @@
 \newcommand{\s}{$\spadesuit$\xspace}
 \renewcommand{\j}{$\bigstar$\xspace}
 \newcommand{\sa}{SA\xspace}
-\newcommand{\M}{M\xspace}
-\newcommand{\m}{m\xspace}
+\newcommand{\M}{$\mathpzc{M}$\xspace}
+\newcommand{\m}{$\mathpzc{m}$\xspace}
 %
 
 \newcommand{\smallspace}{\vskip0.3cm}
@@ -206,7 +209,7 @@ Dopo 1 \M\ - 2 \M\ - 2 \sa, il rispondente licita come segue.
 Dopo una \emph{trial-bid}, il rispondente rivaluta la mano e sceglie fra 3 \M e 4 \M. 
 
 
-\paragraph{Sviluppo dopo 1 \M - 2 \sa (Jensen).} \label{jensen} Dopo 1 \s\ - 2 \sa, l'apertore licita come segue.
+\paragraph{Sviluppo dopo 1 \M\ - 2 \sa (Jensen).} \label{jensen} Dopo 1 \s\ - 2 \sa, l'apertore licita come segue.
 
 \biddingtable{1 \s & P & 2 \sa & P \\ * &&&}
 \begin{twocol}
@@ -316,36 +319,93 @@ Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono 
 
 La seconda dichiarazione dell'apertore descrive la distribuzione della mano secondo principi naturali.
 
-\paragraph{Dopo 1 \c\ - 1 \j.} In ordine di priorità:
+\paragraph{Dopo 1 \c\ - 1 \d.} In ordine di priorità:
 
-\biddingtable{1 \c & P & 1 \j & P \\ * &&&}
-\begin{enumerate}[(i)]
-  \item dare il fit in un seme nobile;
-  \item licitare una quarta nobile;
-  \item dare il fit a \d;
-  \item decidere tra 2 \c (con \c almeno quinte) o 1 \sa. In caso di mano semi-bilanciata con \j terzo, licitare 1 \sa.
-\end{enumerate}
-
-\paragraph{Dopo 1 \d\ - 1 \h.} In ordine di priorità:
-
-\biddingtable{1 \d & P & 1 \h & P \\ * &&&}
+\biddingtable{1 \c & P & 1 \d & P \\ * &&&}
 \begin{twocol}
- 2 \h & fit quarto;\\
- 1 \s & \s almeno quarte;\\
- 2 \c & \c almeno quarte;\\
- 2 \d & \d almeno seste;\\
- 1 \sa & mano bilanciata.
+ 2 \sa & 18-19 HCP, mano bilanciata;\\
+ 1 \M & 12-15 HCP, \M almeno quarto;\\
+ 2 \M & 16+ HCP, \M almeno quarto;\\
+ 3 \M & Cue-bid con fit a \d, mano molto forte e sbilanciata;\\
+ 2 \d & 12-15 HCP, fit a \d;\\
+ 3 \d & 16+ HCP, fit a \d;\\
+ 1 \sa & 12-14 HCP, mano bilanciata;\\
+ 3 \sa & 19+ HCP, \c almeno seste, fermi nei semi nobili;\\
+ 2 \c & 12-15 HCP, \c almeno seste;\\
+ 3 \c & 16+ HCP, \c almeno seste.
 \end{twocol}
 
-\paragraph{Dopo 1 \d\ - 1 \s.} In ordine di priorità:
+\paragraph{Dopo 1 \c\ - 1 \h.} In ordine di priorità:
+
+\biddingtable{1 \c & P & 1 \h & P \\ * &&&}
+\begin{twocol}
+ 2 \sa & 18-19 HCP, mano bilanciata, senza fit a \h;\\
+ 3 \d & 18-19 HCP, mano bilanciata, con fit a \h;\\ 
+ 3 \s / 4 \m & Cue-bid con fit a \h, mano molto forte e sbilanciata;\\
+ 2 \h & 12-15 HCP, fit a \h;\\
+ 3 \h & 16+ HCP, fit a \h (implica mano non bilanciata);\\
+ 1 \s & 12-15 HCP, \s almeno quarte;\\
+ 2 \s & 16+ HCP, \s almeno quarte;\\
+ 2 \d & 16+ HCP, \d almeno quarte;\\
+ 3 \sa & 19+ HCP, \c almeno seste, fermi a \d e \s;\\
+ 2 \c & 12-15 HCP, \c almeno seste;\\
+ 3 \c & 16+ HCP, \c almeno seste;\\
+ 1 \sa & 12-15 HCP.\\
+\end{twocol}
+
+
+\paragraph{Dopo 1 \c\ - 1 \s.} In ordine di priorità:
+
+\biddingtable{1 \c & P & 1 \s & P \\ * &&&}
+\begin{twocol}
+ 2 \sa & 18-19 HCP, mano bilanciata, senza fit a \s;\\
+ 3 \d & 18-19 HCP, mano bilanciata, con fit a \s;\\ 
+ 3 \h / 4 \m & Cue-bid con fit a \s, mano molto forte e sbilanciata;\\
+ 2 \s & 12-15 HCP, fit a \s;\\
+ 3 \s & 16+ HCP, fit a \s (implica mano non bilanciata);\\
+ 2 \d & 16+ HCP, \d almeno quarte;\\
+ 2 \h & 16+ HCP, \h almeno quarte;\\
+ 3 \sa & 19+ HCP, \c almeno seste, fermi a \d e \h;\\
+ 2 \c & 12-15 HCP, \c almeno seste;\\
+ 3 \c & 16+ HCP, \c almeno seste;\\
+ 1 \sa & 12-15 HCP.\\
+\end{twocol}
+
+\paragraph{Dopo 1 \d\ - 1 \h.} In ordine di priorità:
+\biddingtable{1 \d & P & 1 \h & P \\ * &&&}
+
+\begin{twocol}
+ 2 \h & 12-15 HCP, fit a \h;\\
+ 3 \h & 16-18 HCP, fit a \h;\\
+ 3 \s\ / 4 \m & Cue-bid con fit a \h;\\
+ 1 \s & 12-15 HCP, \s almeno quarte;\\
+ 2 \s & 16+ HCP, \s quarte, senza fit (implica \d almeno quinte);\\
+ 2 \c & 12-15 HCP, \c almeno quarte;\\
+ 2 \d & 12-15 HCP, \d almeno seste;\\
+ 1 \sa & 12-14 HCP, mano bilanciata;\\
+ 2 \sa & 16-18 HCP, senza fit, senza singoli né vuoti, \d al massimo seste (5-4-2-2, 6-3-2-2);\\
+ 3 \c & 16+ HCP, \c almeno quarte (bicolore \d/\c), senza fit, con almeno un singolo o vuoto;\\
+ 3 \d & 16+ HCP, \d seste con almeno un singolo o vuoto, oppure \d settime, senza fit;\\
+ 3 \sa & 19+ HCP, senza fit, senza singoli né vuoti, \d al massimo seste (5-4-2-2, 6-3-2-2).
+\end{twocol}
+
+\paragraph{Dopo 1 \d\ - 1 \s.} Senza rever, in ordine di priorità:
 
 \biddingtable{1 \d & P & 1 \s & P \\ * &&&}
 \begin{twocol}
- 2 \s & fit quarto;\\
- 2 \c & \c almeno quarte;\\
- 2 \d & \d almeno quinte;\\
- 1 \sa & mano bilanciata.
+ 2 \s & 12-15 HCP, fit a \s;\\
+ 3 \s & 16-18 HCP, fit a \s;\\
+ 3 \h\ / 4 \m & Cue-bid con fit a \s;\\
+ 2 \h & 16+ HCP, \h quarte, senza fit (implica \d almeno quinte);\\
+ 2 \c & 12-15 HCP, \c almeno quarte;\\
+ 2 \d & 12-15 HCP, \d almeno quinte;\\
+ 1 \sa & 12-15 HCP;\\
+ 2 \sa & 16-18 HCP, senza fit, senza singoli né vuoti, \d al massimo seste (5-4-2-2, 6-3-2-2);\\
+ 3 \c & 16+ HCP, \c almeno quarte (bicolore \d/\c), senza fit, con almeno un singolo o vuoto;\\
+ 3 \d & 16+ HCP, \d seste con almeno un singolo o vuoto, oppure \d settime, senza fit;\\
+ 3 \sa & 19+ HCP, senza fit, senza singoli né vuoti, \d al massimo seste (5-4-2-2, 6-3-2-2).
 \end{twocol}
+
 
 \subsection{Dopo un'apertura nobile}
 
@@ -361,54 +421,9 @@ La seconda dichiarazione dell'apertore descrive la distribuzione della mano seco
  3 \h & invitante, \h belle almeno seste;\\
  2 \d & 12-15 HCP, \d almeno quarte;\\
  2 \h & 12-15 HCP, \h almeno seste;\\
- 1 \sa & mano semi-bilanciata;
+ 1 \sa & 12-15 HCP (mano semi-bilanciata).
 \end{twocol}
 
-
-
-
-
-\paragraph{Senza rever.} Licitando 2 nel colore del rispondente si dà il fit. Altrimenti 1 \sa oppure (se possibile) un nuovo colore.
-
-Dopo 1 colore - 1 colore - 1 colore, la risposta di 1 \sa esclude la manche (5-8 HCP), mentre la risposta di 2 \sa è invitante manche a \sa.
-
-\paragraph{Roudi.} Dopo la sequenza 1 colore - 1 \h (\s) \ - 1 \sa, la licita di 2 \c (Roudi) chiede ulteriore descrizione della mano. L'apertore licita come segue.
-\begin{twocol}
-	2 \d & 12-13 HCP, nega la terza di \h (\s).\\
-	2 \h & 12-13 HCP, terza di \h (\s).\\
-	2 \s & 14-15 HCP, terza di \h (\s).\\
-	2 \sa & 14-15 HCP, nega la terza di \h (\s).
-\end{twocol}
-
-
-\paragraph{Con rever.} Dopo 1 \c\ - 1 \h si licita
-\begin{twocol}
-	2 \d & \d almeno quarte, senza fit.\\
-	2 \s & \s almeno quarte, senza fit.\\
-	2 \sa & 18-19 HCP, mano bilanciata \emph{senza fit}.\\
-	3 \c & 16-18 HCP, \c seste, senza fit.\\
-	3 \d & 19+ HCP, \c seste, senza fit.\\
-	3 \h & Fit a \h, 16-18 HCP, invitante.\\
-	3 \s\ / 4 \c / 4 \d & Cue-bid. 19+ HCP, fit a \h, forzante manche.\\
-	3 \sa & 
-\end{twocol}
-
-\noindent Se il rispondente aveva licitato 1 \s, semplicemente si scambiano i ruoli di \h e \s.
-\smallspace
-\noindent Dopo 1 \d\ - 1 \h si licita
-\begin{twocol}
-	2 \s & \s quarte, senza fit.\\
-	2 \sa & 16-18 HCP, senza fit, senza singoli né vuoti, \d al massimo seste (5-4-2-2, 6-3-2-2).\\
-	3 \c & \c quarte (bicolore \d/\c), senza fit, con almeno un singolo o vuoto.\\
-	3 \d & \d seste con almeno un singolo o vuoto, oppure \d settime, senza fit.\\
-	3 \h & Fit a \h, 16-18 HCP, invitante.\\
-	3 \s\ / 4 \c\ / 4 \d & Cue-bid. 19+ HCP, fit a \h, forzante manche.\\
-	3 \sa & 19+ HCP, senza fit, senza singoli né vuoti, \d al massimo seste (5-4-2-2, 6-3-2-2).
-\end{twocol}
-
-\noindent Se il rispondente aveva licitato 1 \s, semplicemente si scambiano i ruoli di \h e \s.
-\smallspace
-\noindent Dopo 1 \h\ - 1 \s si licita 2 \c (Gazzilli).
 
 \paragraph{Sviluppi dopo un rever a livello di 2 (a colore).} Il rispondente può licitare 2 \sa (Ingberman), obbligando l'apertore a licitare 3 \c con mano minima (16-17 HCP). Dopo questa licita di 3 \c, il rispondente può scegliere una atout a livello di 3 (eventualmente passando) e si gioca un contratto parziale. Ogni altra licita superiore o uguale a 3 \sa è forzante manche.
 
@@ -587,6 +602,17 @@ Dopo la risposta su 2 \sa, il rispondente può: chiudere a 3 \j o 4 \j (a giocar
 Attenzione: le risposte che garantiscono un singolo o un vuoto danno implicitamente una Cue-bid debole nel colore (questo è importante nel caso in cui, successivamente, si inizino le Cue-bid).
 
 \pagebreak
+
+
+% \paragraph{Roudi.} Dopo la sequenza 1 colore - 1 \h (\s) \ - 1 \sa, la licita di 2 \c (Roudi) chiede ulteriore descrizione della mano. L'apertore licita come segue.
+% \begin{twocol}
+% 	2 \d & 12-13 HCP, nega la terza di \h (\s).\\
+% 	2 \h & 12-13 HCP, terza di \h (\s).\\
+% 	2 \s & 14-15 HCP, terza di \h (\s).\\
+% 	2 \sa & 14-15 HCP, nega la terza di \h (\s).
+% \end{twocol}
+
+
 
 \section{Risposte sull'apertura 1 SA}
 

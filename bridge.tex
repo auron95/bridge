@@ -20,6 +20,7 @@
 \usepackage{array}
 \usepackage{skak}
 \usepackage{needspace}
+\usepackage{epigraph}
 
 \DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
 
@@ -93,11 +94,14 @@
 \begin{document}
 \maketitle
 
+
 \tableofcontents
 
 \pagebreak
-\section{Aperture}
 
+\emph{``Una singola convenzione non capita mai, ma se si giocano 100 convenzioni possono capitare!''} --- Norberto Bocchi
+
+\section{Aperture}
 
 \paragraph{Algoritmo generale.}
 Si licita il colore più lungo, escludendo \s e \h se non sono almeno quinte e le \d se non sono almeno quarte.
@@ -149,7 +153,7 @@ Ogni mano con forza di manche o 22+ HCP bilanciata si apre convenzionalmente di 
 
 \begin{twocol}
  \alert{2 \d} & 6--10 HCP, con un seme nobile almeno sesto.\\
- 2 \M & 6--10 HCP, \M almeno quinto e un seme minore laterale almeno quarto.\\
+ 2 \M & 6--10 HCP, \M almeno quinte e un seme minore laterale almeno quarto.\\
  3 \j & Colore almeno settimo (barrage), meglio se a compagno passato.\\
  \alert{3 \sa} & Minore almeno settimo chiuso (AKQ), al più una Q laterale.\\
  4 \j & Colore almeno ottavo (barrage), meglio se a compagno passato.
@@ -191,7 +195,7 @@ Si risponde con 5+ HCP oppure con un Asso.
 \begin{twocol}
   2 \d & 12+ HCP, forzante fino a 2 \M.\\
   2 \M & Apertura leggera, sign-off.\\
-  3 \sa & 5-3-3-2 passa o correggi, senza visuale di slam.\\
+  3 \sa & 5-3-3-2 ``passa o correggi'', senza visuale di slam.\\
   4 \M & A giocare.\\
   Altro & Cue-bid, forzante manche.
 \end{twocol}
@@ -229,9 +233,7 @@ Dopo 1 \M\ - 2 \M\ - 2 \sa, il rispondente licita come segue.
   3 \h & 16+ HCP, singolo o vuoto a \h, senza quinte laterali.\\
   3 \s & 16+ HCP singolo o vuoto a \c, senza quinte laterali.\\
   3 \sa & 18+ HCP, senza quinte laterali né singoli né vuoti.\\
-  4 \c & 16+ HCP, \c almeno quinte.\\
-  4 \d & 16+ HCP, \d almeno quinte.\\
-  4 \h & 16+ HCP, \h almeno quinte.\\
+  4 \c/\d/\h & 16+ HCP, seme almeno quinto.\\
   4 \s & 16--17 HCP, senza singoli né vuoti.
 \end{twocol}
 
@@ -264,7 +266,7 @@ Se possibile, dire un colore almeno quarto a livello di 1 --- il più lungo, e i
   %1 \d/\h/\s & \d/\h/\s almeno quarte.\\
   1 \sa & 5--9 HCP, senza quarte licitabili a livello di 1 (quindi \c almeno quarte). \\
   2 \c & Forzante manche, senza quarte licitabili a livello di 1 (quindi \c almeno quarte). \\
-  \alert{2 \d} & 0--4 HCP e un seme nobile almeno sesto. L'apertore può licitare 2 \h (passa o correggi). \\
+  \alert{2 \d} & 0--4 HCP e un seme nobile almeno sesto. L'apertore può licitare 2 \h (``passa o correggi''). \\
   2 \h & 5--8 HCP, bicolore \s/\h (almeno 5-4). \\
   2 \s & 9--11 HCP, bicolore \s/\h (almeno 5-4). \\
   2 \sa & 10--11 HCP, \c quarte o quinte, mano bilanciata.\\
@@ -281,7 +283,7 @@ Se possibile, dire un colore almeno quarto a livello di 1 --- il più lungo, e i
   %1 \M & \M almeno quarto.\\
   1 \sa & 5--9 HCP, senza quarte licitabili a livello di 1. \\
   2 \c & Forzante manche, senza quarte licitabili a livello di 1. \\
-  \alert{2 \d} & 0--4 HCP e un seme nobile almeno sesto. L'apertore può licitare 2 \h (passa o correggi). \\
+  \alert{2 \d} & 0--4 HCP e un seme nobile almeno sesto. L'apertore può licitare 2 \h (``passa o correggi''). \\
   2 \h & 5--8 HCP, bicolore \s/\h (almeno 5-4). \\
   2 \s & 9--11 HCP, bicolore \s/\h (almeno 5-4). \\
   2 \sa & 10--11 HCP, invitante a 3 \sa, senza singoli né vuoti.\\
@@ -300,7 +302,6 @@ Se possibile, dare la quarta di \s. Le risposte 2/1 da parte di un rispondente p
   2 \c & Forzante manche. \\
   2 \d & Forzante manche, \d almeno quinte.\\
   2 \s & 0--5 HCP, \s almeno seste.\\
-  3 \m & 9--11 HCP, \m belle almene seste, invitante a 3 \sa o 5 \m.\\
   3 \s & 5--7 HCP, \s belle almeno settime.\\
   4 \s & Barrage.
   
@@ -317,7 +318,7 @@ Le risposte 2/1 da parte di un rispondente precedentemente passato di mano sono 
   2 \c & Forzante manche. \\
   2 \d & Forzante manche, \d almeno quinte.\\
   2 \h & Forzante manche, \h almeno quinte.\\
-  3 \c/\d/\h & 9--11 HCP, \c/\d/\h belle almeno seste, invitante a 3 \sa o 4 \h o 5 \c/\d.\\
+  3 \h & 9--11 HCP, \h belle almeno seste, invitante a 3 \sa o 4 \h.\\
   4 \h & Barrage.
 \end{twocol}
 
@@ -500,7 +501,7 @@ Il rispondente licita come segue.
   2 \d & Relais positivo, 8+ HCP. \\
   Riporto nel nobile & 5--7 HCP, doubleton. \\
   Altro nobile & 5--7 HCP, nobile almeno quinto. \\
-  3 \c\ / 3 \d & 5--7 HCP, minore almeno sesto. \\
+  3 \m & 5--7 HCP, minore almeno sesto. \\
   2 \sa & Tutti gli altri casi.
 \end{twocol}
 
@@ -513,7 +514,7 @@ In aggiunta, sulla sequenza 1 \h\ - 1 \sa\ - 2 \c, il rispondente ha a disposizi
   2 \h & 12--15 HCP, \c almeno quarte. \\
   2 \s & Esattamente 3 carte di \s, rever. (*)\\
   2 \sa & 19+ HCP, 5-3-3-2 senza terza di \s. \\
-  3 \c\ / 3 \d & Minore almeno quarto, senza terza di \s, rever. \\
+  3 \m & Minore almeno quarto, senza terza di \s, rever. \\
   3 \h & \h almeno seste, senza terza di \s, rever. \\
   3 \s & \s quarte, rever. \\
   3 \sa & 16-18 HCP, 5-3-3-2 senza terza di \s.
@@ -522,7 +523,7 @@ In aggiunta, sulla sequenza 1 \h\ - 1 \sa\ - 2 \c, il rispondente ha a disposizi
 \noindent (*) Sviluppi dopo 2 \s. Il rispondente licita 2 \sa (relais) e l'apertore licita come segue.
 \biddingtable{1 \h & P & 1 \j & P \\ 2 \c & P & 2 \d & P \\ 2 \s & P & 2 \sa & P \\ *}
 \begin{twocol}
-  3 \c / 3 \d & Minore almeno quarto. \\
+  3 \m & Minore almeno quarto. \\
   3 \h & \h almeno seste. \\
   3 \s & 19+ HCP, 5-3-3-2. \\
   3 \sa & 16--18 HCP, 5-3-3-2.
@@ -536,7 +537,7 @@ In aggiunta, sulla sequenza 1 \h\ - 1 \sa\ - 2 \c, il rispondente ha a disposizi
   2 \h & \h terze o quarte, rever. (*)\\
   2 \s & 12--15 HCP, \c almeno quarte. \\
   2 \sa & 19+ HCP, 5-3-3-2 senza terza di \h. \\
-  3 \c\ / 3 \d & Minore almeno quarto, senza terza di \h, rever. \\
+  3 \m & Minore almeno quarto, senza terza di \h, rever. \\
   3 \h & \h quinte, rever. \\
   3 \s & \s almeno seste, senza terza di \h, rever. \\
   3 \sa & 16--18 HCP, 5-3-3-2 senza terza di \h.
@@ -546,7 +547,7 @@ In aggiunta, sulla sequenza 1 \h\ - 1 \sa\ - 2 \c, il rispondente ha a disposizi
 \biddingtable{1 \s & P & 1 \sa & P \\ 2 \c & P & 2 \d & P \\ 2 \h & P & 2 \s & P \\ *}
 \begin{twocol}
   2 \sa & 19+ HCP, 5-3-3-2. \\
-  3 \c / 3 \d & Minore almeno quarto. \\
+  3 \m & Minore almeno quarto. \\
   3 \h & \h quarte. \\
   3 \s & \s almeno seste. \\
   3 \sa & 16--18 HCP, 5-3-3-2.
@@ -559,9 +560,9 @@ Dopo l'apertura di 1 \M, il rispondente licita come segue.
 
 \biddingtable{1 \M & P & 1 \j & P \\ 2 \sa & P & * &}
 \begin{twocol}
- 3 \c & Interrogativo, chiede la quarta laterale;\\
- 3 \M & 5--7 HCP, riporto nel nobile dell'apertore;\\
- 4 \m & Cue bid con fit a \M;\\
+ 3 \c & Interrogativo, chiede la quarta laterale.\\
+ 3 \M & 5--7 HCP, riporto nel nobile dell'apertore.\\
+ 4 \m & Cue bid con fit a \M.\\
  Altro & Naturale, forzante.
 \end{twocol}
 
@@ -576,8 +577,8 @@ Sull'interrogativa 3 \c, l’apertore licita la quarta in maniera naturale al li
 
 \biddingtable{1 \m & P & 2 \d & P \\ * &&&}
 \begin{twocol}
-  2 \h & Passa o correggi;\\
-  2 \sa & Relais interrogativo, chiede di licitare il nobile;\\
+  2 \h & ``Passa o correggi''.\\
+  2 \sa & Relais interrogativo, chiede di licitare il nobile.\\
   3 \m & Naturale, non forzante.
 \end{twocol}
 
@@ -586,9 +587,9 @@ Sull'interrogativa 3 \c, l’apertore licita la quarta in maniera naturale al li
 \biddingtable{1 \m & P & 2 \h & P \\ * &&&}
 \begin{twocol}
   Pass & \\
-  2 \s & A giocare;\\
-  2 \sa & Relais interrogativo (\hyperref[zurli]{Zurlì});\\
-  3 \m & Naturale, non forzante;\\
+  2 \s & A giocare.\\
+  2 \sa & Relais interrogativo (\hyperref[zurli]{Zurlì}).\\
+  3 \m & Naturale, non forzante.\\
   3 \M & Invitante.
 \end{twocol}
 
@@ -597,9 +598,9 @@ Sull'interrogativa 3 \c, l’apertore licita la quarta in maniera naturale al li
 \biddingtable{1 \m & P & 2 \s & P \\ * &&&}
 \begin{twocol}
   Pass & \\
-  2 \sa & Relais interrogativo (\hyperref[zurli]{Zurlì})\\
-  3 \m & Naturale, non forzante;\\
-  3 \h & A giocare;\\
+  2 \sa & Relais interrogativo (\hyperref[zurli]{Zurlì}).\\
+  3 \m & Naturale, non forzante.\\
+  3 \h & A giocare.\\
   3 \s & Invitante.
 \end{twocol}
 
@@ -607,9 +608,9 @@ Sull'interrogativa 3 \c, l’apertore licita la quarta in maniera naturale al li
 
 \biddingtable{1 \m & P & 2 \M & P \\ 2 \sa & P & * &}
 \begin{twocol}
-  3 \c & Mano minima, \h quarte;\\
-  3 \d & Mano minima, \h almeno quinte;\\
-  3 \h & Mano massima, \h almeno quinte;\\
+  3 \c & Mano minima, \h quarte.\\
+  3 \d & Mano minima, \h almeno quinte.\\
+  3 \h & Mano massima, \h almeno quinte.\\
   3 \s & Mano massima, \h quarte.
 \end{twocol}
 
@@ -617,9 +618,9 @@ Sull'interrogativa 3 \c, l’apertore licita la quarta in maniera naturale al li
 
 \biddingtable{1 \c & P & 2 \c & P \\ * &&&}
 \begin{twocol}
-	2 \d /\M & Buon seme almeno quarto (per giocare a \sa);\\
-	2 SA & 18--19 HCP, mano bilanciata. \\
-	3 \c & 14+ HCP, \c almeno seste, senza singoli né vuoti. \\
+	2 \d/\h/\s & Buon seme almeno quarto (per giocare a \sa).\\
+	2 SA & 18--19 HCP, mano bilanciata.\\
+	3 \c & 14+ HCP, \c almeno seste, senza singoli né vuoti.\\
 	3 \d & 14+ HCP, \c almeno quinte, singolo o vuoto a \d.\\
 	3 \h & 14+ HCP, \c almeno quinte, singolo o vuoto a \h.\\
 	3 \s & 14+ HCP, \c almeno quinte, singolo o vuoto a \s.\\
@@ -631,11 +632,11 @@ Sull'interrogativa 3 \c, l’apertore licita la quarta in maniera naturale al li
 
 \biddingtable{1 \d & P & 2 \c & P \\ * &&&}
 \begin{twocol}
-	2 \d & \d almeno seste;\\
-	2 \M & Buon seme almeno quarto (per giocare a \sa);\\
-	2 SA & 12--14 HCP mano (semi-)bilanciata;\\
-	3 \c & Buone \c almeno quarte (per giocare a \sa);\\
-	3 \d & 16+ HCP, ottime \d almeno seste;\\
+	2 \d & 12--15 HCP, \d almeno seste.\\
+	2 \M & Buon seme almeno quarto (per giocare a \sa).\\
+	2 SA & 12--14 HCP mano (semi-)bilanciata.\\
+	3 \c & Buone \c almeno quarte (per giocare a \sa).\\
+	3 \d & 16+ HCP, ottime \d almeno seste.\\
 \end{twocol}
 
 \paragraph{Dopo 1 \h\ - 2 \c.} Nota: il rispondente possiede almeno 4 carte di \c. L'apertore licita come segue.
@@ -717,7 +718,7 @@ Sull'interrogativa 3 \c, l’apertore licita la quarta in maniera naturale al li
 
 \subsection{Quarto colore del rispondente}
 
-Nel caso in cui le prime tre licite siano state tutte a colore, e abbiano coinvolto 3 diversi colori, se l'apertore non ha dato rever il rispondente può licitare a livello* il 4° colore (forzante, interrogativo) anche senza possederlo. L'apertore licita come segue, in ordine di priorità.
+Nel caso in cui le prime tre licite siano state tutte a colore, e abbiano coinvolto 3 diversi colori, se l'apertore non ha dato rever il rispondente può licitare a livello* il quarto colore (forzante, interrogativo) anche senza possederlo. L'apertore licita come segue, in ordine di priorità.
 
 \begin{itemize}
  \item \sa a livello: fermo nel quarto colore, disponibile a giocare a \sa.
@@ -753,7 +754,7 @@ Questo si applica nei seguenti casi:
 1 \c\ - 1 \s\ - 2 \c\ - 2 \d/\h.\\
 1 \d\ - 1 \h\ - 2 \d\ - 2 \c/\s.\\
 1 \d\ - 1 \s\ - 2 \d\ - 2 \c/\h.\\
-1 \h\ - 1 \s\ - 2 \h\ - 3 \c/\d
+1 \h\ - 1 \s\ - 2 \h\ - 3 \m
 
 
 \subsection{2 \c Roudi}
@@ -1017,11 +1018,13 @@ Dopo la sequenza 2 \c\ - 2 \d\ - 2 \sa (22+ HCP, mano bilanciata), si applicano 
 
 \section{Sviluppi sull'apertura di 2 \d (Multicolor)}
 
+Ricordiamo che l'apertura di 2 \d multicolor si effettua con 6--10 HCP e una sesta nobile, oppure con 16+ HCP e una mano 4-4-4-1.
+
 Dopo l'apertura di 2 \d, il rispondente licita come segue.
 
 \biddingtable{2 \d & P & * &}
 \begin{twocol}
-	2 \h & Mano debole, passa o correggi.\\
+	2 \h & Mano debole, ``passa o correggi''.\\
 	2 \s & Mano invitante con supporto a \h.\\
 	2 \sa & 14+ HCP, interrogativo.\\
 	3 \m & Minore almeno sesto, a giocare.\\
@@ -1088,21 +1091,23 @@ Dopo 4 \d:
 
 \pagebreak
 
-%\section{Sviluppi sulle sottoaperture}
-%
-%Sulle sottoaperture le Cue-bid si iniziano solo a salto. Dichiarare 4 \sa sottintende il seme dell'apertore come atout. Ogni altra dichiarazione a colore è naturale (con seme almeno quinto e con 14+ HCP) e forzante 1 giro.
-%
-%\paragraph{Su 2 \j.} Se il rispondente ha almeno 14 HCP può dichiarare 2 \sa (Ogust). Seguono le risposte.
-%\biddingtable{2 \j & P & 2 \sa & P \\ * &&&}
-%\begin{twocol}
-% 3 \c & Mano minima, carte deboli a \j.\\
-% 3 \d & Mano minima, carte buone a \j.\\
-% 3 \h & Mano massima, carte deboli a \j.\\
-% 3 \s & Mano massima, carte buone a \j.\\
-% 3 \sa & A, K, Q di \j.
-%\end{twocol}
-%
-%Se dopo 2 \sa c'è un intervento, Pass dà mano minima, X o XX mano massima.
+\section{Sviluppi sulle sottoaperture}
+
+Se la coppia decide di giocare le sottoaperture deboli seste a livello di 2 (in alternativa alla 2 \d multicolor), ci si atterrà alle seguenti convenzioni.
+
+Le Cue-bid si iniziano solo a salto. Dichiarare 4 \sa sottintende il seme dell'apertore come atout. Ogni altra dichiarazione a colore è naturale (con seme almeno quinto e con 14+ HCP) e forzante 1 giro.
+
+\paragraph{Su 2 \j.} Se il rispondente ha almeno 14 HCP può dichiarare 2 \sa (Ogust). Seguono le risposte.
+\biddingtable{2 \j & P & 2 \sa & P \\ * &&&}
+\begin{twocol}
+ 3 \c & Mano minima, carte deboli a \j.\\
+ 3 \d & Mano minima, carte buone a \j.\\
+ 3 \h & Mano massima, carte deboli a \j.\\
+ 3 \s & Mano massima, carte buone a \j.\\
+ 3 \sa & A, K, Q di \j.
+\end{twocol}
+
+Se dopo 2 \sa c'è un intervento, Pass dà mano minima, X o XX mano massima.
 
 \section{Sviluppi sull'apertura di 3 \sa (Gambling)}
 
@@ -1130,7 +1135,7 @@ Dopo una risposta 4 \j che dà il singolo/vuoto, l'apertore licita come segue.
 
 \biddingtable{3 \sa & P & 4 \d & P \\ 4 \j & P & * &}
 \begin{twocol}
- 5 \m & ``Passa o correggi''.\\
+ 5 \c & ``Passa o correggi''.\\
  5 \j & Invita l'apertore a dichiarare piccolo slam con il singolo, grande slam con il vuoto.
 \end{twocol}
 
@@ -1189,15 +1194,15 @@ Ai fini delle richieste d'Assi e di Re, il K di atout è considerato un Asso. In
 Allora il richiedente domanda 6 \c, e il rispondente licita 6 \d se non possiede il K di \s, 6 \h se possiede il K di \s.\\
 (Lo vogliamo davvero?)}
 
-
 \smallspace
 
 \noindent In alternativa alla richiesta di Q di atout, con 5 \sa si può effettuare la richiesta di Re. Seguono le risposte.
 
 \begin{twocol}
-6 \c & 0 o 3 Re.\\
+6 \c & Nessun Re.\\
 6 \d & 1 Re.\\
 6 \h & 2 Re.\\
+6 \s & 3 Re.
 \end{twocol}
 
 
@@ -1355,9 +1360,9 @@ Quando si arriva in una situazione competitiva ad alto livello e una linea ha ch
 	Rialzo & Mano debole sbilanciata, senza interesse di slam. 
 \end{twocol}
 
-\section{Riapetura da secondo di mano}
+\section{Riapetura del secondo di mano}
 
-Dopo la sequenza 1 \h\ - P - 2 \h\ - P - P, il secondo di mano con 6-10 HCP può licitare come segue.
+Dopo la sequenza 1 \h\ - P - 2 \h\ - P - P, il secondo di mano può licitare come segue.
 
 \biddingtable{1 \h & P & 2 \h & P \\ P & * &&}
 \begin{twocol}
@@ -1370,7 +1375,7 @@ Dopo la sequenza 1 \h\ - P - 2 \h\ - P - P, il secondo di mano con 6-10 HCP può
 Dopo l'intervento di 2 \s (monocolore), il compagno licita come segue.
 \biddingtable{1 \h & P & 2 \h & P \\ P & 2 \s & P & *}
 \begin{twocol}
-	3 \c & Passa o correggi.\\
+	3 \c & ``Passa o correggi''.\\
 	2 \sa & Interrogativo. Con mano minima si risponde 3 \m, con mano massima 3 \h per le \c, 3 \s per le \d.\\
 \end{twocol}
 
@@ -1388,7 +1393,7 @@ Dopo il Contre (mano monocolore), il compagno licita come segue.
 \biddingtable{1 \s & P & 2 \s & P \\ P & X & P & *}
 \begin{twocol}
 	2 \sa & Interrogativo, buona mano tendenzialmente con fermo a \s.\\
-	3 \c & Passa o correggi.
+	3 \c & ``Passa o correggi''.
 \end{twocol}
 
 Dopo la licita interrogativa 2 \sa, il contrante licita come segue.
@@ -1414,7 +1419,7 @@ Se è noto dalla dichiarazione
 
 \paragraph{Senza atout} Si attacca preferibilmente in sequenza di onori in un seme almeno quarto (anche terzo in mancanza di attacchi migliori).
 
-In alternativa si attacca con l'ultima scartina in posizione dispari del seme più lungo (terza carta se il seme è terzo o quarto, quinta carta se il seme è quinto o sesto, etc.), evitando di attaccare sotto Asso o K se il seme è al più quarto. Questo permette di rispettare la direzione ascendente/discendente descritta nei principi generali in caso di ritorno nello stesso seme.
+In alternativa si attacca con l'ultima scartina in posizione dispari del seme più lungo (terza carta se il seme è terzo o quarto, quinta carta se il seme è quinto o sesto, etc.), evitando di attaccare sotto Asso o Re se il seme è al più quarto. Questo permette di rispettare la direzione ascendente/discendente descritta nei principi generali in caso di ritorno nello stesso seme.
 
 \paragraph{Con atout} La preferenza dipende dalla licita e dalla distribuzione della mano. Si può attaccare con singolo o doubleton, con sequenza di onori. Un attacco ad atout promette al più due carte nel seme di atout, senza onori maggiori.
 

@@ -59,6 +59,9 @@
 
 \newcommand{\note}[1]{\textcolor{red}{#1}}
 
+\theoremstyle{definition}
+\newtheorem*{definition}{Definizione}
+
 
 \newenvironment{twocol}
 {\smallspace\noindent\tabularx{\linewidth}{ l X }}%p{0.78\textwidth}}}
@@ -123,12 +126,20 @@ La regola d'oro per distinguere una licita forzante da una non forzante è: tutt
 
 Si parla con 12+ HCP. Si licita il proprio colore più lungo, con l'accortezza che 1\M\ promette almeno 5 carte di \M, mentre 1\d promette 4 carte. Per differenza, 1\c può essere detto con solo 2 carte di \c (se uno ha la distribuzione 4-4-3-2).
 
+\begin{definition}
+	Una mano è detta bilanciata se non ha singoli o vuoti, e ha al più un doubleton (quindi 5-3-3-2. 4-4-3-2. 4-3-3-3).
+\end{definition}
+
 \biddingtable{* & & &}
 \begin{twocol}
-	1 \c & 12+ HCP, nessuna delle seguenti (quindi 2+\c). \\
+	1 \c & 12+ HCP, nessuna delle seguenti (quindi 2+\c) \\
+	1 \c\ + 2 \sa \footnote{Cioè: l'apertore apre di 1 \c, e al secondo giro dice 2 \sa.} & 18-19 HCP, bilanciata, senza quinta nobile. \\
 	1 \d & 12+ HCP, 4+ \d, senza quinta nobile. \\
 	1 \h & 12+ HCP, 5+ \h \\
 	1 \s & 12+ HCP, 5+ \s \\
+	1 \sa & 15-17, bilanciata, senza quinta nobile. \\
+	2 \c + 2 \sa & 22+ HCP, bilanciata. \\
+	2 \sa & 20-21, bilanciata. \\
 	Altro & Nelle prossime lezioni.
 \end{twocol}
 
@@ -180,82 +191,123 @@ Dopo 1\M\ - 3\M, ricordiamoci che la licita del nostro compagno è competitiva, 
 \paragraph{Senza fit.} To be continued...
 % Se possibile, dire il colore più lungo a livello di 1 (a parità di lunghezza, il più economico). Per salire a livello di 2 bisogna avere almeno 12 HCP (a meno che non sia per dare il fit). Se non si rientra in nessuna di queste possibilità, si licita 1 \sa.
 
-% \section{Risposte sull'apertura di 1 \sa}
+\section{Risposte sull'apertura di 1 \sa}
+
+\paragraph{Per giocare a \sa.} Il rispondente può licitare
+
+\biddingtable{1 \sa & P & *}
+\begin{threecol}
+	Pass & & 0-7 HCP.\\
+	2 \sa & I & Invitante (8-9 HCP).\\
+	3 \sa & S & Sign-off (10-14 HCP).\\
+	% 4 \c & Richiesta d'Assi (Gerber).
+\end{threecol}
+
+\paragraph{Transfer.} Con 5+ \M o 6+ \m, il rispondente può licitare
+
+\biddingtable{1 \sa & P & *}
+\begin{threecol}
+	2 \d & F & Obbliga l'apertore a licitare 2 \h.\\
+	2 \h & F & Obbliga l'apertore a licitare 2 \s.\\
+	2 \s & F & Obbliga l'apertore a licitare 3 \c.\\
+	3 \c & F & Obbliga l'apertore a licitare 3 \d.
+\end{threecol}
+
+Dopo ad esempio 2 \d -- 2 \h:
+
+\biddingtable{1 \sa & P & 2 \d & P \\ 2 \h & P & *}
+\begin{threecol}
+	Pass & & A giocare.\\
+	2 \sa & I & Invitante, esattamente 5 \h, vedi sotto.\\
+	3 \h & I & Invitante, 6+ \h.\\
+	3 \sa & N & 5 \h. L'apertore dovrebbe correggere a 4 \h con 3+ \h.\\
+	4 \sa & S & Sign-off.
+\end{threecol}
+
+Su 2 \sa:
+
+\biddingtable{1 \sa & P & 2 \d & P \\ 2 \h & P & 2 \sa & P \\ *}
+\begin{threecol}
+	Pass & & 2 \h, mano minima.\\
+	3 \h & S & 3+ \h, mano minima.\\
+	3 \sa & S & 2 \h, mano massima. \\
+	4 \h & S & 3+ \h, mano massima.
+\end{threecol}
+
 %
-% \paragraph{Per giocare a \sa.} Il rispondente può licitare
 %
-% \biddingtable{1 \sa & P & *}
-% \begin{twocol}
-% 	PASS & 0-7 HCP.\\
-% 	2 \sa & Invitante (8-9 HCP).\\
-% 	3 \sa & Sign-off (10-14 HCP).\\
-% 	4 \c & Richiesta d'Assi (Gerber).
-% \end{twocol}
+\paragraph{Richiesta di quarte nobili (Stayman).} Con 8+ HCP il rispondente può licitare 2 \c, cercando fit in un seme nobile. Implica il possesso di una quarta nobile. L'apertore licita come segue.
 %
-% \paragraph{Transfer.} Il rispondente può licitare
-%
-% \biddingtable{1 \sa & P & *}
-% \begin{twocol}
-% 	2 \d & Obbliga l'apertore a licitare 2 \h.\\
-% 	2 \h & Obbliga l'apertore a licitare 2 \s.\\
-% 	2 \s & Obbliga l'apertore a licitare 3 \c.\\
-% 	3 \c & Obbliga l'apertore a licitare 3 \d.
-% \end{twocol}
-%
-% In questo modo si seleziona l'atout; il rispondente poi guida scegliendo il livello del contratto (pass, invito a manche, manche, cue-bid, richiesta d'assi).
-%
-% \paragraph{Richiesta di quarte nobili (Stayman).} Con 8+ HCP il rispondente può licitare 2 \c, cercando fit in un seme nobile. L'apertore licita come segue.
-%
-% \biddingtable{1 \sa & P & 2 \c & P \\ *}
-% \begin{twocol}
-% 	2 \d & Nessuna quarta nobile.\\
-% 	2 \h & \h quarte, ma non \s quarte.\\
-% 	2 \s & \s quarte, ma non \h quarte.\\
-% 	2 SA & Entrambe le quarte nobili.
-% \end{twocol}
+\biddingtable{1 \sa & P & 2 \c & P \\ *}
+\begin{threecol}
+	2 \d & F\footnote{In realtà il rispondente può anche passare se lo ritiene, dato che conosce perfettamente la mano dell'apertore. In particolare, se ha una mano bilanciata debole con poche \c, può fare comunque la Stayman con l'intenzione di passare qualsiasi risposta, compresa questa. Questa convenzione prende il nome di Garbage Stayman. } & Nessuna quarta nobile.\\
+	2 \h & N & \h quarte.\\
+	2 \s & N & \s quarte, ma non \h quarte.\\
+\end{threecol}
+
+Dopo la risposta di 2 \h, qualsiasi licita del rispondente che non sia \h implica \s quarte. In particolare:
+
+\biddingtable{1 \sa & P & 2 \c & P \\ 2\h & P & *}
+\begin{threecol}
+	2 \sa & I & Invitante. L'apertore può correggere a \s con 4+ \s.\\
+	3 \h & I & Invitante, 4+ \h.\\
+	3 \sa & N & \s quarte, passa o correggi a 4 \s.\\
+	4 \h & S & Sign-off.
+\end{threecol}
+
+Gli altri casi sono analoghi: ricordate che il rispondente ha una mano almeno invitante, quindi tutte le licite del rispondente sotto manche non forzanti (tendenzialmente 2 \sa e 3 \M) sono invitanti: l'apertore con il massimo deve correggere a manche.
 %
 % Il rispondente ora conosce talmente bene la mano dell'apertore da poter selezionare il contratto migliore, passando eventualmente da un invito.
 %
-% \section{Risposte sull'apertura di 2 \sa}
+\section{Risposte sull'apertura di 2 \sa}
 %
-% Ciò che segue si applica anche nei seguenti casi:
-% \begin{itemize}
-% 	\item l'apertura è stata 1 \c\ - 1 \j\ - 2 \sa (18-19 HCP). In questo caso bisogna alzare di due punti tutti i range (poiché l'apertore ha due punti in meno).
-% 	\item l'apertura è stata 2 \c\ - 2 \j\ - 2 \sa (22+ HCP). In questo caso bisogna abbassare di due punti tutti i range (poiché l'apertore ha due punti in più).
-% \end{itemize}
+Ciò che segue si applica anche nei seguenti casi:
+\begin{itemize}
+	\item l'apertura è stata 1 \c\ - 1 \j\ - 2 \sa (18-19 HCP). In questo caso bisogna alzare di due punti tutti i range (poiché l'apertore ha due punti in meno). Inoltre in questo caso 3 \c\ è la Stayman normale (dato che l'apertore non ha una quinta nobile).
+	\item l'apertura è stata 2 \c\ - 2 \j\ - 2 \sa (22+ HCP). In questo caso bisogna abbassare di due punti tutti i range (poiché l'apertore ha due punti in più).
+\end{itemize}
 %
-% \paragraph{Per giocare a \sa.} Il rispondente può licitare
+\paragraph{Per giocare a \sa.} Il rispondente può licitare
 %
-% \biddingtable{2 \sa & P & *}
-% \begin{twocol}
-% 	PASS & 0-4 HCP.\\
-% 	3 \sa & Sign-off (5-10 HCP).\\
-% 	4 \c & Richiesta d'Assi (Gerber).
-% \end{twocol}
+\biddingtable{2 \sa & P & *}
+\begin{twocol}
+	PASS & 0-4 HCP.\\
+	3 \sa & Sign-off (5-10 HCP).\\
+	% 4 \c & Richiesta d'Assi (Gerber).
+\end{twocol}
 %
-% \paragraph{Transfer.} Il rispondente può licitare
+\paragraph{Transfer.} Il rispondente può licitare
 %
-% \biddingtable{2 \sa & P & *}
-% \begin{twocol}
-% 	3 \d & Obbliga l'apertore a licitare 3 \h.\\
-% 	3 \h & Obbliga l'apertore a licitare 3 \s.\\
-% 	3 \s & Obbliga l'apertore a licitare 4 \c.\\
-% 	4 \c & Obbliga l'apertore a licitare 4 \d.\\
-% \end{twocol}
+\biddingtable{2 \sa & P & *}
+\begin{twocol}
+	3 \d & Obbliga l'apertore a licitare 3 \h.\\
+	3 \h & Obbliga l'apertore a licitare 3 \s.\\
+	3 \s & Obbliga l'apertore a licitare 4 \c.\\
+	4 \c & Obbliga l'apertore a licitare 4 \d.\\
+\end{twocol}
 %
-% In questo modo si seleziona l'atout; il rispondente poi guida scegliendo il livello del contratto. Le ultime due possibilità vanno usate con cautela, poiché il livello sale molto e, soprattutto, vi prendete la responsabilità di saltare 3 \sa!
+In questo modo si seleziona l'atout; il rispondente poi guida scegliendo il livello del contratto. Le ultime due possibilità vanno usate con cautela, poiché il livello sale molto e, soprattutto, vi prendete la responsabilità di saltare 3 \sa!
 %
-% \paragraph{Richiesta di quarte nobili (Stayman).} Con 4/5+ HCP (manche garantita, almeno a \sa) il rispondente può licitare 3 \c, cercando fit in un seme nobile. L'apertore licita come segue.
+\paragraph{Richiesta di quarte nobili (Puppet Stayman).} La seguente convenzione si applica quando l'apertore potrebbe avere una mano bilanciata con quinta nobile. Con 4/5+ HCP (manche garantita, almeno a \sa) il rispondente può licitare 3 \c, cercando fit in un seme nobile. L'apertore licita come segue.
+
+\biddingtable{2 \sa & P & 3 \c & P \\ * &&&}
+\begin{twocol}
+	3 \d & Almeno una quarta nobile.\\
+	3 \h & 5-3-3-2 con la quinta di \h.\\
+	3 \s & 5-3-3-2 con la quinta di \s.\\
+	3 \sa & Nessuna quarta né quinta nobile.\\
+\end{twocol}
+
+Dopo la risposta 3 \d il rispondente licita come segue.
+
+\biddingtable{2 \sa & P & 3 \c & P \\ 3 \d & P & * &}
+\begin{twocol}
+	3 \h & Quarta di \s.\\
+	3 \s & Quarta di \h.\\
+	3 \sa & A giocare (cercava una quinta nobile).\\
+	4 \d & Entrambe le quarte nobili.\\
+\end{twocol}
 %
-% \biddingtable{2 \sa & P & 2 \c & P \\ *}
-% \begin{twocol}
-% 	3 \d & Nessuna quarta nobile.\\
-% 	3 \h & \h quarte, ma non \s quarte.\\
-% 	3 \s & \s quarte, ma non \h quarte.\\
-% 	3 SA & Entrambe le quarte nobili.
-% \end{twocol}
-%
-% Il rispondente ora conosce talmente bene la mano dell'apertore da poter selezionare il contratto migliore.
 %
 % \section{Rever}
 %
